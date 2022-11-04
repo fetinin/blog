@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My New Hugo Site</title>
-    <link>http://example.org/tags/</link>
-    <description>Recent content in Tags on My New Hugo Site</description>
+    <title>Tags on Hello Friend</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Hello Friend</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Nov 2022 16:11:16 +0300</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hello</title>
+      <link>/tags/hello/</link>
+      <pubDate>Fri, 04 Nov 2022 16:11:16 +0300</pubDate>
+      
+      <guid>/tags/hello/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>architecture</title>
+      <link>/tags/architecture/</link>
+      <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>book-review</title>
+      <link>/tags/book-review/</link>
+      <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/book-review/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

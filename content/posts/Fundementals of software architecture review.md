@@ -7,7 +7,7 @@ tags:
   - architecture
 ---
 
-by Mark Richards, Neal Ford
+book by Mark Richards, Neal Ford
 
  > 
  > When reading about architecture readers must keep in mind that, like much art, it can only be understood in context.
