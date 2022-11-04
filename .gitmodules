@@ -1,0 +1,6 @@
+[submodule "themes/hugo-theme-modern"]
+	path = themes/hugo-theme-modern
+	url = git@github.com:fetinin/hugo-theme-modern.git
+[submodule "knowledge_base"]
+	path = knowledge_base
+	url = git@github.com:fetinin/knowledge.git
