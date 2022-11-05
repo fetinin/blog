@@ -5,25 +5,6 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>architecture</title>
-      <link>/tags/architecture/</link>
-      <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/architecture/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>book-review</title>
-      <link>/tags/book-review/</link>
-      <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/book-review/</guid>
-      <description></description>
-    </item>
-    
+    <language>en-us</language><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

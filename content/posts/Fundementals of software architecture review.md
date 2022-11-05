@@ -7,7 +7,9 @@ tags:
   - architecture
 ---
 
-book by Mark Richards, Neal Ford
+Fundementals of software architecture is a book by Mark Richards, Neal Ford.
+
+This article is mostly just a bunch of quotes collected from it. I'll take some time to process them and update this article.
 
  > 
  > When reading about architecture readers must keep in mind that, like much art, it can only be understood in context.
