@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <div class="post">
+    {{ if $.Param "automaticHeadings" | default true }}
+    <h1>{{ if .Params.heading }}{{ .Params.heading | markdownify }}{{ else }}{{ .Title | markdownify }}{{ end }}</h1>
+    {{ end }}
+
+    <div class="post-content">
+    {{ if .Params.Avatar }}
+      {{ $avatarPath := (printf "%s%s" .Permalink .Params.Avatar ) }}
+        {{ if not .Params.UseRelativeAvatar }}
+          {{ $avatarPath := ($avatarPath | absURL ) }}
+        {{ end }}
+        <img src="{{ $avatarPath }}" class="post-cover" style="float: right; width: 200px;  margin: 0 15px 0 0;"/>
+    {{ end }}
+
+      {{ with .Content }}
+        {{ if $.Param "stripHighlights" | default false }}
+          {{ partial "strip-highlights" . }}
+        {{ else }}
+          {{ partial "mark-highlights" . }}
+        {{ end }}
+      {{ end }}
+    </div>
+
+    {{ partial "page_metadata.html" . }}
+    </div>
+{{ end }}

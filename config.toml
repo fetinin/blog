@@ -1,7 +1,5 @@
 baseurl = "/"
 languageCode = "en-us"
-# Add it only if you keep the theme in the `themes` directory.
-# Remove it if you use the theme as a remote Hugo Module.
 theme = "hugo-theme-modern"
 paginate = 5
 defaultContentLanguage = 'en'
@@ -12,13 +10,13 @@ defaultContentLanguage = 'en'
   contentTypeName = "posts"
 
   # OS theme is default when not provided, but you can force it to "light" or "dark"
-  defaultTheme = "dark"
+  defaultTheme = "light"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
 
   # Show reading time in minutes for posts
-  showReadingTime = false
+  showReadingTime = true
 
   # Show table of contents at the top of your posts (defaults to false)
   # Alternatively, add this param to post front matter for specific posts
@@ -35,9 +33,9 @@ defaultContentLanguage = 'en'
 
 [languages]
   [languages.en]
-    title = "Hello Friend"
-    subtitle = "A simple theme for Hugo"
-    keywords = ""
+    title = "Denis' Digital Garden"
+    subtitle = "Software Engineer Blog"
+    keywords = "Denis Fetinin,software blog,e-commerce,blog,golang blog"
     copyright = ""
     menuMore = "Show more"
     writtenBy = "Written by"
@@ -61,10 +59,10 @@ defaultContentLanguage = 'en'
 
     [languages.en.menu]
       [[languages.en.menu.header]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.en.menu.header]]
         identifier = "Posts"
         name = "Posts"
         url = "/posts"
+      [[languages.en.menu.header]]
+        identifier = "about"
+        name = "About Me"
+        url = "/about"

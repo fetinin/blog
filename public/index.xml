@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hello Friend</title>
+    <title>Denis&#39; Digital Garden</title>
     <link>/</link>
-    <description>Recent content on Hello Friend</description>
+    <description>Recent content on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Nov 2022 16:11:16 +0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My First Post</title>
-      <link>/posts/my-first-post/</link>
-      <pubDate>Fri, 04 Nov 2022 16:11:16 +0300</pubDate>
-      
-      <guid>/posts/my-first-post/</guid>
-      <description>Hello!</description>
-    </item>
-    
+    <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fundementals of software architecture review</title>
       <link>/posts/fundementals-of-software-architecture-review/</link>
@@ -27,6 +18,17 @@ When reading about architecture readers must keep in mind that, like much art, i
 Everything in software architecture is a trade-off.
 First Law of Software Architecture If an architect thinks they have discovered something that isn’t a trade-off, more likely they just haven’t identified the trade-off yet. Why is more important than how.
 Second Law of Software Architecture Never shoot for the best architecture, but rather the least worst architecture.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Hi, I&amp;rsquo;m Denis 💁🏻‍♂️💻 Golang and Python developer who secretly love frontend but most of the time work as a backend developer at Lamoda.
+I have experience with microservices and event-driven architecture. Work in E-commerce on apps and website backend and 20+ microservices that provide discounts, catalog navigation, pricing, checkout, cart and other for our customers.
+Like to work in a small to medium teams and help understand business requirements, plan and document architecture, decompose tasks, code and get things done.</description>
     </item>
     
   </channel>
