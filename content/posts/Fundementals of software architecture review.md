@@ -1,7 +1,7 @@
 ---
 title: Fundementals of software architecture review
 date: 2022-11-04
-draft: true
+draft: false
 tags:
   - book-review
   - architecture

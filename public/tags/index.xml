@@ -2,9 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Denis&#39; Digital Garden</title>
-    <link>/tags/</link>
+    <link>blog.fetinin.dev/tags/</link>
     <description>Recent content in Tags on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="blog.fetinin.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>architecture</title>
+      <link>blog.fetinin.dev/tags/architecture/</link>
+      <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>blog.fetinin.dev/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>book-review</title>
+      <link>blog.fetinin.dev/tags/book-review/</link>
+      <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>blog.fetinin.dev/tags/book-review/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

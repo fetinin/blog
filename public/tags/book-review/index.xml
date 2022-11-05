@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>book-review on Denis&#39; Digital Garden</title>
-    <link>/tags/book-review/</link>
+    <link>blog.fetinin.dev/tags/book-review/</link>
     <description>Recent content in book-review on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/book-review/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="blog.fetinin.dev/tags/book-review/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fundementals of software architecture review</title>
-      <link>/posts/fundementals-of-software-architecture-review/</link>
+      <link>blog.fetinin.dev/posts/fundementals-of-software-architecture-review/</link>
       <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/posts/fundementals-of-software-architecture-review/</guid>
-      <description>book by Mark Richards, Neal Ford
+      <guid>blog.fetinin.dev/posts/fundementals-of-software-architecture-review/</guid>
+      <description>Fundementals of software architecture is a book by Mark Richards, Neal Ford.
+This article is mostly just a bunch of quotes collected from it. I&amp;rsquo;ll take some time to process them and update this article.
 When reading about architecture readers must keep in mind that, like much art, it can only be understood in context.
 Everything in software architecture is a trade-off.
-First Law of Software Architecture If an architect thinks they have discovered something that isn’t a trade-off, more likely they just haven’t identified the trade-off yet. Why is more important than how.
-Second Law of Software Architecture Never shoot for the best architecture, but rather the least worst architecture.</description>
+First Law of Software Architecture If an architect thinks they have discovered something that isn’t a trade-off, more likely they just haven’t identified the trade-off yet.</description>
     </item>
     
   </channel>

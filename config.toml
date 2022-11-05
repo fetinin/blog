@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "blog.fetinin.dev"
 languageCode = "en-us"
 theme = "hugo-theme-modern"
 paginate = 5
