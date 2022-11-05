@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>architecture on Denis&#39; Digital Garden</title>
-    <link>blog.fetinin.dev/tags/architecture/</link>
+    <link>/tags/architecture/</link>
     <description>Recent content in architecture on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="blog.fetinin.dev/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fundementals of software architecture review</title>
-      <link>blog.fetinin.dev/posts/fundementals-of-software-architecture-review/</link>
+      <link>/posts/fundementals-of-software-architecture-review/</link>
       <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>blog.fetinin.dev/posts/fundementals-of-software-architecture-review/</guid>
+      <guid>/posts/fundementals-of-software-architecture-review/</guid>
       <description>Fundementals of software architecture is a book by Mark Richards, Neal Ford.
 This article is mostly just a bunch of quotes collected from it. I&amp;rsquo;ll take some time to process them and update this article.
 When reading about architecture readers must keep in mind that, like much art, it can only be understood in context.

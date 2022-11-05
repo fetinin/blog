@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>blog.fetinin.dev/</loc>
+    <loc>/</loc>
     <lastmod>2022-11-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>blog.fetinin.dev/tags/architecture/</loc>
+    <loc>/tags/architecture/</loc>
     <lastmod>2022-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>blog.fetinin.dev/tags/book-review/</loc>
+    <loc>/tags/book-review/</loc>
     <lastmod>2022-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>blog.fetinin.dev/posts/fundementals-of-software-architecture-review/</loc>
+    <loc>/posts/fundementals-of-software-architecture-review/</loc>
     <lastmod>2022-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>blog.fetinin.dev/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2022-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>blog.fetinin.dev/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2022-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>blog.fetinin.dev/about/</loc>
+    <loc>/about/</loc>
   </url><url>
-    <loc>blog.fetinin.dev/categories/</loc>
+    <loc>/categories/</loc>
   </url>
 </urlset>
