@@ -7,7 +7,8 @@ tags:
   - architecture
 ---
 
-Fundamentals of software architecture is book by Mark Richards and Neal Ford —hands-on practitioners who have taught software architecture classes professionally for years—focus on architecture principles that apply across all technology stacks.
+{{< css >}}img {max-width: 50%}{{< /css >}}
+Fundamentals of software architecture is book by Mark Richards and Neal Ford — hands-on practitioners who have taught software architecture classes professionally for years—focus on architecture principles that apply across all technology stacks.
 
 This book left me with good basis of what role software architect plays in a company and extended my knowledge of different architecture patterns. In the following series of articles I'll write about topics from this book that I liked most.
 
