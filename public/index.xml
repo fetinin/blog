@@ -8,16 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fundementals of software architecture review</title>
-      <link>/posts/fundementals-of-software-architecture-review/</link>
+      <title>Fundamentals of software architecture review. Part 1. Who is an Architect?</title>
+      <link>/posts/fundamentals-of-software-architecture-review/part-1.-who-is-an-architect/</link>
       <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/posts/fundementals-of-software-architecture-review/</guid>
-      <description>Fundementals of software architecture is a book by Mark Richards, Neal Ford.
-This article is mostly just a bunch of quotes collected from it. I&amp;rsquo;ll take some time to process them and update this article.
-When reading about architecture readers must keep in mind that, like much art, it can only be understood in context.
-Everything in software architecture is a trade-off.
-First Law of Software Architecture If an architect thinks they have discovered something that isn’t a trade-off, more likely they just haven’t identified the trade-off yet.</description>
+      <guid>/posts/fundamentals-of-software-architecture-review/part-1.-who-is-an-architect/</guid>
+      <description>Fundamentals of software architecture is book by Mark Richards and Neal Ford —hands-on practitioners who have taught software architecture classes professionally for years—focus on architecture principles that apply across all technology stacks.
+This book left me with good basis of what role software architect plays in a company and extended my knowledge of different architecture patterns. In the following series of articles I&amp;rsquo;ll write about topics from this book that I liked most.</description>
     </item>
     
     <item>

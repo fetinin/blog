@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Denis&#39; Digital Garden</title>
-    <link>/posts/</link>
-    <description>Recent content in Posts on Denis&#39; Digital Garden</description>
+    <title>book/review on Denis&#39; Digital Garden</title>
+    <link>/tags/book/review/</link>
+    <description>Recent content in book/review on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/tags/book/review/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fundamentals of software architecture review. Part 1. Who is an Architect?</title>
       <link>/posts/fundamentals-of-software-architecture-review/part-1.-who-is-an-architect/</link>
