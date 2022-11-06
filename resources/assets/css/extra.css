@@ -1,0 +1,17 @@
+#social-links a {
+  text-decoration: none;
+  margin: 3px;
+  font-size: 14pt;
+}
+
+.posts-preview h1 {
+  margin-bottom: 0;
+}
+
+.posts-preview .post {
+  padding-top: 0;
+}
+
+.posts-preview h2 {
+  font-size: 15pt;
+}
