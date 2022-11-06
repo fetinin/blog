@@ -1,5 +1,5 @@
 build:
-	git submodule update --recursive --remote &&\
+	git pull --recurse-submodules &&\
 	obsidian-export ./knowledge_base/ ./_build && cp -R _build/blogposts/ content/posts/ &&\
 	hugo
 
