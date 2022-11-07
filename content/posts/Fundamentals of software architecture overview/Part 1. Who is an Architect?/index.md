@@ -1,22 +1,19 @@
 ---
-title: Fundamentals of software architecture review. Part 1. Who is an Architect?
+title: Fundamentals of software architecture book overview. Part 1. Who is an Architect?
 date: 2022-11-04
 draft: false
 tags:
-  - book/review
+  - book
   - architecture
 ---
 
-{{< css >}}img {max-width: 50%}{{< /css >}}
-Fundamentals of software architecture is book by Mark Richards and Neal Ford — hands-on practitioners who have taught software architecture classes professionally for years—focus on architecture principles that apply across all technology stacks.
+[Fundamentals of software architecture](https://www.amazon.com/Fundamentals-Software-Architecture-Comprehensive-Characteristics/dp/1492043451) is a book by Mark Richards and Neal Ford — hands-on practitioners who have taught software architecture classes professionally for years—focus on architecture principles that apply across all technology stacks.
 
 This book left me with good basis of what role software architect plays in a company and extended my knowledge of different architecture patterns. In the following series of articles I'll write about topics from this book that I liked most.
 
-## Who is software architect?
+## Who is a software architect?
 
-Authors wrote a whole chapter called "Introduction" about that.
-
-The industry as a whole has struggled to precisely define "software architecture". His role car range from expert programmer up to defining the strategic technical direction for the company. However, there are eight core expectations placed on a software architect irrespective of any given role, title, or job description:
+The industry as a whole has struggled to precisely define "software architect". His role car range from expert programmer up to defining the strategic technical direction for the company. However, there are eight core expectations placed on a software architect irrespective of any given role, title, or job description:
 
 * Make architecture decisions[^1]
 * Continually analyze the architecture[^2]
@@ -29,7 +26,7 @@ The industry as a whole has struggled to precisely define "software architecture
 
 ## Unknown unknowns
 
-![knowledge pyramid](images/unknowns.png)
+![knowledge pyramid](unknowns.png)
 
 Building software is hard and part of this difficulties lies antiquated accounting practices that cannot accommodate the exploratory nature of software development, but another part is because we’re traditionally bad at estimation, at least in part because of unknown unknowns.
 \>…because as we know, there are known knowns; there are things we know we know. We also know there are known unknowns; that is to say we know there are some things we do not know. But there are also unknown unknowns—the ones we don’t know we don’t know.

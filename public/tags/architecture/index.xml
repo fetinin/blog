@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fundamentals of software architecture review. Part 1. Who is an Architect?</title>
-      <link>/posts/fundamentals-of-software-architecture-review/part-1.-who-is-an-architect/</link>
+      <title>Fundamentals of software architecture book overview. Part 1. Who is an Architect?</title>
+      <link>/posts/fundamentals-of-software-architecture-overview/part-1.-who-is-an-architect/</link>
       <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/posts/fundamentals-of-software-architecture-review/part-1.-who-is-an-architect/</guid>
-      <description>Fundamentals of software architecture is book by Mark Richards and Neal Ford — hands-on practitioners who have taught software architecture classes professionally for years—focus on architecture principles that apply across all technology stacks.
+      <guid>/posts/fundamentals-of-software-architecture-overview/part-1.-who-is-an-architect/</guid>
+      <description>Fundamentals of software architecture is a book by Mark Richards and Neal Ford — hands-on practitioners who have taught software architecture classes professionally for years—focus on architecture principles that apply across all technology stacks.
 This book left me with good basis of what role software architect plays in a company and extended my knowledge of different architecture patterns. In the following series of articles I&amp;rsquo;ll write about topics from this book that I liked most.</description>
     </item>
     

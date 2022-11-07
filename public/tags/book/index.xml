@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Denis&#39; Digital Garden</title>
-    <link>/</link>
-    <description>Recent content on Denis&#39; Digital Garden</description>
+    <title>book on Denis&#39; Digital Garden</title>
+    <link>/tags/book/</link>
+    <description>Recent content in book on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/book/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fundamentals of software architecture book overview. Part 1. Who is an Architect?</title>
       <link>/posts/fundamentals-of-software-architecture-overview/part-1.-who-is-an-architect/</link>
@@ -15,17 +15,6 @@
       <guid>/posts/fundamentals-of-software-architecture-overview/part-1.-who-is-an-architect/</guid>
       <description>Fundamentals of software architecture is a book by Mark Richards and Neal Ford — hands-on practitioners who have taught software architecture classes professionally for years—focus on architecture principles that apply across all technology stacks.
 This book left me with good basis of what role software architect plays in a company and extended my knowledge of different architecture patterns. In the following series of articles I&amp;rsquo;ll write about topics from this book that I liked most.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Hi, I&amp;rsquo;m Denis 💁🏻‍♂️💻 Golang and Python developer who secretly love frontend but most of the time work as a backend developer at Lamoda.
-I have experience with microservices and event-driven architecture. Work in E-commerce on apps and website backend and 20+ microservices that provide discounts and coupons, catalog navigation, checkout, cart and other for our customers.
-Like to work in a small to medium teams and help understand business requirements, plan and document architecture, decompose tasks, code and get things done.</description>
     </item>
     
   </channel>
