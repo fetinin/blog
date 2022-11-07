@@ -26,7 +26,7 @@ The industry as a whole has struggled to precisely define "software architect". 
 
 ## Unknown unknowns
 
-![knowledge pyramid](unknowns.png)
+![knowledge pyramid](images/unknowns.png)
 
 Building software is hard and part of this difficulties lies antiquated accounting practices that cannot accommodate the exploratory nature of software development, but another part is because we’re traditionally bad at estimation, at least in part because of unknown unknowns.
 \>…because as we know, there are known knowns; there are things we know we know. We also know there are known unknowns; that is to say we know there are some things we do not know. But there are also unknown unknowns—the ones we don’t know we don’t know.
@@ -55,7 +55,7 @@ It's more than that. An architect should:
 
 These terms are sometimes used interchangeably, but in fact they are not. They describe how things are intertwined with each other in different scopes. While cohesion is about "local" scope of objects (modules) that are closely related to each other, coupling scope is much larger and covers how different modules are connected with each other.
 
-==💡 Strive for high cohesion[^9] and low coupling ==
+💡 Strive for high cohesion[^9] and low coupling
 
 Programming languages usually have abstractions to express coupling and cohesion. Where cohesive objects are combined into package, module, class, component and these packages are connected to each other through interface.
 It can also be translated to microservices, where interface is commonly represented as HTTP API. Thus, by following the rule above, a microservice should be highly cohesive to its business logic domain and loosely coupled to other microservices by maintaining as little interface as possible.
