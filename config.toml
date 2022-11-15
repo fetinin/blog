@@ -4,6 +4,7 @@ theme = "hugo-theme-modern"
 paginate = 5
 defaultContentLanguage = 'en'
 enableGitInfo = true
+enableRobotsTXT = true
 
 [params]
   # dir name of your blog content (default is `content/posts`).
