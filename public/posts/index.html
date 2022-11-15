@@ -114,6 +114,45 @@
 
     
     <div class="post on-list">
+      <h1 class="post-title"><a href="/posts/gonkey/introduction/">Introduction to Gonkey &ndash; testing automation tool</a></h1>
+      <div class="post-meta">
+      
+        <span class="post-date">
+          <time datetime="2022-11-13T00:00:00&#43;0000">2022-11-13</time>
+        </span>
+      
+        
+          <span class="post-read-time">&dash; 2 min read</span>
+        
+      </div>
+
+
+      
+        <span class="post-tags">
+          
+            #<a href="tags/golang/">golang</a>&nbsp;
+          
+            #<a href="tags/gonkey/">gonkey</a>&nbsp;
+          
+            #<a href="tags/testing/">testing</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            Gonkey is a testing automation tool that can test your service API without a single line of code. Here is a quick example:
+# File cases/post.yaml - name: &#34;POST response must contain same data as in request&#34; method: POST path: /post headers: Content-Type: application/json request: &gt; {&#34;phrase&#34;: &#34;Hello Gonkey!&#34;} response: 200: &gt; {&#34;json&#34;: {&#34;phrase&#34;: &#34;Hello Gonkey!&#34;}} Given a file with this test, Gonkey will send a POST request to &lt;host&gt;/post endpoint with Content-Type header and body {&quot;phrase&quot;: &quot;Hello Gonkey!
+          
+        
+      </div>
+      <div><a class="read-more button" href="/posts/gonkey/introduction/">Read more →</a></div>
+    </div>
+    
+    <div class="post on-list">
       <h1 class="post-title"><a href="/posts/fundamentals-of-software-architecture-overview/part-1.-who-is-an-architect/">Fundamentals of software architecture book overview. Part 1. Who is an Architect?</a></h1>
       <div class="post-meta">
       

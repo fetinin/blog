@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gonkey on Denis&#39; Digital Garden</title>
+    <link>/tags/gonkey/</link>
+    <description>Recent content in gonkey on Denis&#39; Digital Garden</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/gonkey/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Gonkey -- testing automation tool</title>
+      <link>/posts/gonkey/introduction/</link>
+      <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/gonkey/introduction/</guid>
+      <description>Gonkey is a testing automation tool that can test your service API without a single line of code. Here is a quick example:
+# File cases/post.yaml - name: &amp;#34;POST response must contain same data as in request&amp;#34; method: POST path: /post headers: Content-Type: application/json request: &amp;gt; {&amp;#34;phrase&amp;#34;: &amp;#34;Hello Gonkey!&amp;#34;} response: 200: &amp;gt; {&amp;#34;json&amp;#34;: {&amp;#34;phrase&amp;#34;: &amp;#34;Hello Gonkey!&amp;#34;}} Given a file with this test, Gonkey will send a POST request to &amp;lt;host&amp;gt;/post endpoint with Content-Type header and body {&amp;quot;phrase&amp;quot;: &amp;quot;Hello Gonkey!</description>
+    </item>
+    
+  </channel>
+</rss>

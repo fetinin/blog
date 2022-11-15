@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     
-    <title>Tags - </title>
+    <title>gonkey - </title>
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content=""/>
 
-<link rel="canonical" href="/tags/" />
+<link rel="canonical" href="/tags/gonkey/" />
 
 
 
@@ -22,20 +22,20 @@
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
+<meta name="twitter:title" content="gonkey"/>
 <meta name="twitter:description" content=""/>
 
 
 
-<meta property="og:title" content="Tags" />
+<meta property="og:title" content="gonkey" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/tags/" /><meta property="og:site_name" content="Denis&#39; Digital Garden" />
+<meta property="og:url" content="/tags/gonkey/" /><meta property="og:site_name" content="Denis&#39; Digital Garden" />
 
 
 
 
-<link rel="alternate" type="application/rss+xml" href="/tags/index.xml" title="Denis' Digital Garden" />
+<link rel="alternate" type="application/rss+xml" href="/tags/gonkey/index.xml" title="Denis' Digital Garden" />
 
 
 <link href="/css/fontawsome.min.be63a1dbf1a76c4127521f8b050d00fb2f3ed639bfa9ea84cea2f12f90d3264c.css" rel="stylesheet" type="text/css" rel="stylesheet" defer />
@@ -107,55 +107,58 @@
 
       <div id="content" class="content">
         
-  <div class="post">
-    <h1 class="post-title">Tags</h1>
-    <div class="post-content">
-      <ul>
+  <div class="posts">
+    
+
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/posts/gonkey/introduction/">Introduction to Gonkey &ndash; testing automation tool</a></h1>
+      
+        <div class="post-meta">
         
-        
-        
-          
-          
-          <li>
-            
-              <a href="/tags/architecture/">Architecture</a> (1)
-            
-          </li>
+          <span class="post-date">
+            <time datetime="2022-11-13T00:00:00&#43;0000">2022-11-13</time>
+          </span>
         
           
+            <span class="post-read-time">&dash; 2 min read</span>
           
-          <li>
+        </div>
+
+
+        
+          <span class="post-tags">
             
-              <a href="/tags/book/">Book</a> (1)
+              #<a href="tags/golang/">golang</a>&nbsp;
             
-          </li>
+              #<a href="tags/gonkey/">gonkey</a>&nbsp;
+            
+              #<a href="tags/testing/">testing</a>&nbsp;
+            
+          </span>
+        
+
+        
+      
+
+      <div class="post-content">
         
           
+            Gonkey is a testing automation tool that can test your service API without a single line of code. Here is a quick example:
+# File cases/post.yaml - name: &#34;POST response must contain same data as in request&#34; method: POST path: /post headers: Content-Type: application/json request: &gt; {&#34;phrase&#34;: &#34;Hello Gonkey!&#34;} response: 200: &gt; {&#34;json&#34;: {&#34;phrase&#34;: &#34;Hello Gonkey!&#34;}} Given a file with this test, Gonkey will send a POST request to &lt;host&gt;/post endpoint with Content-Type header and body {&quot;phrase&quot;: &quot;Hello Gonkey!
           
-          <li>
-            
-              <a href="/tags/golang/">Golang</a> (1)
-            
-          </li>
         
-          
-          
-          <li>
-            
-              <a href="/tags/gonkey/">Gonkey</a> (1)
-            
-          </li>
-        
-          
-          
-          <li>
-            
-              <a href="/tags/testing/">Testing</a> (1)
-            
-          </li>
-        
-      </ul>
+      </div>
+      <div><a class="read-more button" href="/posts/gonkey/introduction/">Read more →</a></div>
     </div>
+    
+    <div class="pagination">
+  <div class="pagination__buttons">
+    
+    
+  </div>
+</div>
+
   </div>
 
       </div>
