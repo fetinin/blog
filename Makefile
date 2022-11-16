@@ -1,8 +1,7 @@
 build:
 	git submodule update --remote &&\
-	rm -rf _build/* &&\
 	rm -rf content/posts/* &&\
-	obsidian-export ./knowledge_base/ ./_build && cp -R _build/blogposts/ content/posts/ &&\
+	cp -R knowledge_base/blogposts/ content/posts/ &&\
 	rm -rf public/ &&\
 	hugo
 

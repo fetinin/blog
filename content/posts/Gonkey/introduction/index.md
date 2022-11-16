@@ -1,16 +1,13 @@
 ---
-title: Introduction to Gonkey -- testing automation tool
+title: "Introduction to Gonkey -- Testing automation tool"
 date: 2022-11-13
 draft: false
-tags:
-  - golang
-  - gonkey
-  - testing
+tags: ["golang", "gonkey", "testing"]
 ---
-
-Gonkey is a testing automation tool that can test your service API without a single line of code. Here is a quick example:
-
-````yaml
+[Gonkey](https://github.com/lamoda/gonkey) is a testing automation tool that can test your service API without a single line of code. 
+<!--more-->
+Here is a quick example:
+```yaml
 # File cases/post.yaml
 - name: "POST response must contain same data as in request"  
   method: POST  
@@ -24,54 +21,39 @@ Gonkey is a testing automation tool that can test your service API without a sin
   response:  
     200: >  
       {"json": {"phrase": "Hello Gonkey!"}}
-````
-
+```
 Given a file with this test, Gonkey will send a POST request to \<host\>/post endpoint with Content-Type header and body `{"phrase": "Hello Gonkey!"}`. Upon receiving a response, it will check that HTTP code is 200 and response contains field `json` with expected data.
-\>💡 Pro tip: Setup [Gonkey JSON-schema](https://github.com/lamoda/gonkey#json-schema) in your editor to add syntax highlight to your favourite IDE and write Gonkey tests more easily.
-
+>💡 Pro tip: Setup [Gonkey JSON-schema](https://github.com/lamoda/gonkey#json-schema) in your editor to add syntax highlight to your favourite IDE and write Gonkey tests more easily.
 ### Give it a try ⌨️
-
 1. Install Gonkey
-
-````bash
+```bash
 go install github.com/lamoda/gonkey@latest
-````
-
+```
 2. Create folder with a test from example above
-
-````bash
+```bash
 mkdir -p cases
 touch example.yaml
 # insert test case from above to example.yaml
-````
-
+```
 3. Run test
-
-````bash
+```bash
 gonkey -tests=./cases -host=https://httpbin.org/
-````
-
+```
 Output should be:
-
-````
+```
 success 1, failed 0, skipped 0, broken 0, total 1
-````
-
+```
 ### What if test fails
-
 Let's change expected response to:
-
-````yaml
+```yaml
 # File cases/post.yaml
 ...
 response:  
   200: >  
     {"json": {"phrase": "Goodbye Gonkey!"}}
-````
-
+```
 Run the test again and see the following output:
-
-````bash
+```bash
 gonkey -tests=cases -host=https://httpbin.org/
 
        Name: POST response must contain same data as in request
@@ -85,7 +67,6 @@ Request:
       Content-Type: application/json
        Body:
 {"phrase": "Hello Gonkey!"}
-
 
 Response:
      Status: 200 OK
@@ -118,27 +99,21 @@ Errors:
      expected: Goodbye Gonkey!
        actual: Hello Gonkey!
 
-
-
 success 0, failed 1, skipped 0, broken 0, total 1
-````
-
+```
 As you can see, the test failed. (What a twist!) When a test is failed, its name, path, request and actual response is printed, so you can easily debug what's happened.
 
- > 
- > Well, it's all nice and dandy, but life is far more complicated than writing tests to echo servers. What else can it do?
+> Well, it's all nice and dandy, but life is far more complicated than writing tests to echo servers. What else can it do?
 
 I'm glad you asked 😃
 
 Gonkey also can:
+* Apply fixtures to database (PostgreSQL, MySQL, Aerospike, Redis);
+* Generate Allure reports;
+* Test service API for compliance with OpenAPI-specs;
+* Mock external HTTP endpoints.[^1]
 
-* Apply fixtures to database (PostgreSQL, MySQL, Aerospike, Redis)
-* Generate Allure reports
-* Test service API for compliance with OpenAPI-specs
-* Mock external HTTP endpoints\*
+That was just the tip of the iceberg. I'll dive deeply on how you can integrate Gonkey with your Go service and `go test` suit to test more complex scenarios in next article.[^2]
 
-\*when used as library
-
-That was just the tip of the iceberg. I'll dive deeply on how you can integrate Gonkey with your Go service and `go test` suit to test more complex scenarios in next article\*.
-
-\*This article is not yet written.
+[^1]: Only when used as library.
+[^2]: This article is not yet written.
