@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tip on Denis&#39; Digital Garden</title>
+    <link>/tags/tip/</link>
+    <description>Recent content in tip on Denis&#39; Digital Garden</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/tip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Safe git force push</title>
+      <link>/posts/safe-git-force-push/</link>
+      <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/safe-git-force-push/</guid>
+      <description>You&amp;rsquo;ve likely been in this situation before. You make some minor code fixes, do git commit --ammend to add them to the current commit, and do git push --force. Then, you happily open pull request and see that you&amp;rsquo;ve deleted you&amp;rsquo;re colleagues commit.😩
+This doesn&amp;rsquo;t happen so often, but when it does, that&amp;rsquo;s a bummer. Solution is simple.This doesn&amp;rsquo;t happen so often, but when it does, that&amp;rsquo;s a bummer. Solution is simple.</description>
+    </item>
+    
+  </channel>
+</rss>

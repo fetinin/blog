@@ -3,35 +3,44 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2022-11-15T19:19:34+03:00</lastmod>
+    <lastmod>2022-11-16T10:46:11+03:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>/tags/golang/</loc>
-    <lastmod>2022-11-15T19:19:34+03:00</lastmod>
-  </url><url>
-    <loc>/tags/gonkey/</loc>
-    <lastmod>2022-11-15T19:19:34+03:00</lastmod>
-  </url><url>
-    <loc>/posts/gonkey/introduction/</loc>
-    <lastmod>2022-11-15T19:19:34+03:00</lastmod>
+    <loc>/tags/git/</loc>
+    <lastmod>2022-11-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
-    <lastmod>2022-11-15T19:19:34+03:00</lastmod>
+    <lastmod>2022-11-16T10:46:11+03:00</lastmod>
+  </url><url>
+    <loc>/posts/safe-git-force-push/</loc>
+    <lastmod>2022-11-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2022-11-15T19:19:34+03:00</lastmod>
+    <lastmod>2022-11-16T10:46:11+03:00</lastmod>
+  </url><url>
+    <loc>/tags/tip/</loc>
+    <lastmod>2022-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/golang/</loc>
+    <lastmod>2022-11-16T10:46:11+03:00</lastmod>
+  </url><url>
+    <loc>/tags/gonkey/</loc>
+    <lastmod>2022-11-16T10:46:11+03:00</lastmod>
+  </url><url>
+    <loc>/posts/gonkey/introduction/</loc>
+    <lastmod>2022-11-16T10:46:11+03:00</lastmod>
   </url><url>
     <loc>/tags/testing/</loc>
-    <lastmod>2022-11-15T19:19:34+03:00</lastmod>
+    <lastmod>2022-11-16T10:46:11+03:00</lastmod>
   </url><url>
     <loc>/tags/architecture/</loc>
-    <lastmod>2022-11-07T11:22:24+03:00</lastmod>
+    <lastmod>2022-11-16T10:46:11+03:00</lastmod>
   </url><url>
     <loc>/tags/book/</loc>
-    <lastmod>2022-11-07T11:22:24+03:00</lastmod>
+    <lastmod>2022-11-16T10:46:11+03:00</lastmod>
   </url><url>
     <loc>/posts/fundamentals-of-software-architecture-overview/part-1.-who-is-an-architect/</loc>
-    <lastmod>2022-11-07T11:22:24+03:00</lastmod>
+    <lastmod>2022-11-16T10:46:11+03:00</lastmod>
   </url><url>
     <loc>/about/</loc>
     <lastmod>2022-11-06T13:12:54+03:00</lastmod>

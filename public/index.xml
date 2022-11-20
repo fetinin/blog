@@ -6,7 +6,17 @@
     <description>Recent content on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Safe git force push</title>
+      <link>/posts/safe-git-force-push/</link>
+      <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/safe-git-force-push/</guid>
+      <description>You&amp;rsquo;ve likely been in this situation before. You make some minor code fixes, do git commit --ammend to add them to the current commit, and do git push --force. Then, you happily open pull request and see that you&amp;rsquo;ve deleted you&amp;rsquo;re colleagues commit.😩
+This doesn&amp;rsquo;t happen so often, but when it does, that&amp;rsquo;s a bummer. Solution is simple.This doesn&amp;rsquo;t happen so often, but when it does, that&amp;rsquo;s a bummer. Solution is simple.</description>
+    </item>
+    
     <item>
       <title>Introduction to Gonkey -- Testing automation tool</title>
       <link>/posts/gonkey/introduction/</link>
