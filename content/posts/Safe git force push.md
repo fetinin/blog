@@ -6,8 +6,10 @@ tags: ["git", "tip"]
 ---
 You've likely been in this situation before. You make some minor code fixes, do `git commit --ammend` to add them to the current commit, and do `git push --force`. Then, you happily open pull request and see that you've deleted you're colleagues commit.😩
 
-This doesn't happen so often, but when it does, that's a bummer. Solution is simple.This doesn't happen so often, but when it does, that's a bummer. Solution is simple.
+This doesn't happen so often, but when it does, that's a bummer. Solution is simple.
+
 ~~git push --force~~
+
 Don't use force push, use `--force-with-lease` instead!
 ```bash
 git push --force-with-lease

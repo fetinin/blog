@@ -7,7 +7,10 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="You&rsquo;ve likely been in this situation before. You make some minor code fixes, do git commit --ammend to add them to the current commit, and do git push --force. Then, you happily open pull request and see that you&rsquo;ve deleted you&rsquo;re colleagues commit.😩
-This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Solution is simple.This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Solution is simple."/>
+This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Solution is simple.
+git push &ndash;force
+Don&rsquo;t use force push, use --force-with-lease instead!
+git push --force-with-lease This option allows you to say that you expect the history you are updating is what you rebased and want to replace."/>
 
 <meta name="keywords" content="git, tip" />
 
@@ -27,17 +30,23 @@ This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Sol
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Safe git force push"/>
 <meta name="twitter:description" content="You&rsquo;ve likely been in this situation before. You make some minor code fixes, do git commit --ammend to add them to the current commit, and do git push --force. Then, you happily open pull request and see that you&rsquo;ve deleted you&rsquo;re colleagues commit.😩
-This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Solution is simple.This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Solution is simple."/>
+This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Solution is simple.
+git push &ndash;force
+Don&rsquo;t use force push, use --force-with-lease instead!
+git push --force-with-lease This option allows you to say that you expect the history you are updating is what you rebased and want to replace."/>
 
 
 
 <meta property="og:title" content="Safe git force push" />
 <meta property="og:description" content="You&rsquo;ve likely been in this situation before. You make some minor code fixes, do git commit --ammend to add them to the current commit, and do git push --force. Then, you happily open pull request and see that you&rsquo;ve deleted you&rsquo;re colleagues commit.😩
-This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Solution is simple.This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Solution is simple." />
+This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Solution is simple.
+git push &ndash;force
+Don&rsquo;t use force push, use --force-with-lease instead!
+git push --force-with-lease This option allows you to say that you expect the history you are updating is what you rebased and want to replace." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/safe-git-force-push/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-11-16T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-11-16T00:00:00+00:00" /><meta property="og:site_name" content="Denis&#39; Digital Garden" />
+<meta property="article:modified_time" content="2022-11-20T19:07:40+03:00" /><meta property="og:site_name" content="Denis&#39; Digital Garden" />
 
 
 
@@ -126,7 +135,7 @@ This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Sol
         </span>
         
         <p class="post-updated-date">
-          Last update: <time datetime="2022-11-16T00:00:00&#43;0000">2022-11-16</time>
+          Last update: <time datetime="2022-11-20T19:07:40&#43;0300">2022-11-20</time>
         </p>
         
     </div>
@@ -147,9 +156,9 @@ This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Sol
       
         
           <p>You&rsquo;ve likely been in this situation before. You make some minor code fixes, do <code>git commit --ammend</code> to add them to the current commit, and do <code>git push --force</code>. Then, you happily open pull request and see that you&rsquo;ve deleted you&rsquo;re colleagues commit.😩</p>
-<p>This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Solution is simple.This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Solution is simple.
-<del>git push &ndash;force</del>
-Don&rsquo;t use force push, use <code>--force-with-lease</code> instead!</p>
+<p>This doesn&rsquo;t happen so often, but when it does, that&rsquo;s a bummer. Solution is simple.</p>
+<p><del>git push &ndash;force</del></p>
+<p>Don&rsquo;t use force push, use <code>--force-with-lease</code> instead!</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push --force-with-lease
 </span></span></code></pre></div><blockquote>
 <p>This option allows you to say that you expect the history you are updating is what you rebased and want to replace. If the remote ref still points at the commit you specified, you can be sure that no other people did anything to the ref. It is like taking a &ldquo;lease&rdquo; on the ref without explicitly locking it, and the remote ref is updated only if the &ldquo;lease&rdquo; is still valid. &ndash;force-with-lease alone, without specifying the details, will protect all remote refs that are going to be updated by requiring their current value to be the same as the remote-tracking branch we have for them.

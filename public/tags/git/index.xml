@@ -14,7 +14,10 @@
       
       <guid>/posts/safe-git-force-push/</guid>
       <description>You&amp;rsquo;ve likely been in this situation before. You make some minor code fixes, do git commit --ammend to add them to the current commit, and do git push --force. Then, you happily open pull request and see that you&amp;rsquo;ve deleted you&amp;rsquo;re colleagues commit.😩
-This doesn&amp;rsquo;t happen so often, but when it does, that&amp;rsquo;s a bummer. Solution is simple.This doesn&amp;rsquo;t happen so often, but when it does, that&amp;rsquo;s a bummer. Solution is simple.</description>
+This doesn&amp;rsquo;t happen so often, but when it does, that&amp;rsquo;s a bummer. Solution is simple.
+git push &amp;ndash;force
+Don&amp;rsquo;t use force push, use --force-with-lease instead!
+git push --force-with-lease This option allows you to say that you expect the history you are updating is what you rebased and want to replace.</description>
     </item>
     
   </channel>
