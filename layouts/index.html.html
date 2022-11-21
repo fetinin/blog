@@ -21,7 +21,7 @@
     <h1>My recent posts</h1>
     {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{ range first 4 $pages }}
-      <div class="post on-list" style="margin: 0px auto;">
+      <div class="post on-list">
         <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
         <div class="post-meta">
         {{ with .Date | default nil }}

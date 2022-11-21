@@ -15,3 +15,24 @@
 .posts-preview h2 {
   font-size: 15pt;
 }
+
+.posts-preview .post {
+  margin: 0 auto;
+  padding-bottom: 0;
+}
+
+.posts-preview .post-meta {
+  margin-bottom: 0;
+}
+
+.posts-preview .post-tags {
+  margin-bottom: 0;
+}
+
+.posts-preview .post-content {
+  margin-top: 0;
+}
+
+.posts-preview .post-title {
+  padding-bottom: 10px;
+}
