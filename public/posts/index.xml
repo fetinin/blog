@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Denis&#39; Digital Garden</title>
-    <link>/posts/</link>
+    <link>https://blog.fetinin.dev/posts/</link>
     <description>Recent content in Posts on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Safe git force push</title>
-      <link>/posts/safe-git-force-push/</link>
+      <link>https://blog.fetinin.dev/posts/safe-git-force-push/</link>
       <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/posts/safe-git-force-push/</guid>
+      <guid>https://blog.fetinin.dev/posts/safe-git-force-push/</guid>
       <description>&lt;p&gt;You&amp;rsquo;ve likely been in this situation before. You make some minor code fixes, do &lt;code&gt;git commit --ammend&lt;/code&gt; to add them to the current commit, and do &lt;code&gt;git push --force&lt;/code&gt;. Then, you happily open pull request and see that you&amp;rsquo;ve deleted you&amp;rsquo;re colleagues commit.😩&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Introduction to Gonkey -- Testing automation tool</title>
-      <link>/posts/gonkey/introduction/</link>
+      <link>https://blog.fetinin.dev/posts/gonkey/introduction/</link>
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/posts/gonkey/introduction/</guid>
+      <guid>https://blog.fetinin.dev/posts/gonkey/introduction/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/lamoda/gonkey&#34;&gt;Gonkey&lt;/a&gt; is a testing automation tool that can test your service API without a single line of code.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Fundamentals of software architecture book overview. Part 1. Who is an Architect?</title>
-      <link>/posts/fundamentals-of-software-architecture-overview/part-1.-who-is-an-architect/</link>
+      <link>https://blog.fetinin.dev/posts/fundamentals-of-software-architecture-overview/part-1.-who-is-an-architect/</link>
       <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/posts/fundamentals-of-software-architecture-overview/part-1.-who-is-an-architect/</guid>
+      <guid>https://blog.fetinin.dev/posts/fundamentals-of-software-architecture-overview/part-1.-who-is-an-architect/</guid>
       <description>Fundamentals of software architecture is a book by Mark Richards and Neal Ford — hands-on practitioners who have taught software architecture classes professionally for years—focus on architecture principles that apply across all technology stacks.
 This book left me with good basis of what role software architect plays in a company and extended my knowledge of different architecture patterns. In the following series of articles I&amp;rsquo;ll write about topics from this book that I liked most.</description>
     </item>

@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Denis&#39; Digital Garden</title>
-    <link>/tags/</link>
+    <link>https://blog.fetinin.dev/tags/</link>
     <description>Recent content in Tags on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git</title>
-      <link>/tags/git/</link>
+      <link>https://blog.fetinin.dev/tags/git/</link>
       <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/git/</guid>
+      <guid>https://blog.fetinin.dev/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tip</title>
-      <link>/tags/tip/</link>
+      <link>https://blog.fetinin.dev/tags/tip/</link>
       <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/tip/</guid>
+      <guid>https://blog.fetinin.dev/tags/tip/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>/tags/golang/</link>
+      <link>https://blog.fetinin.dev/tags/golang/</link>
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/golang/</guid>
+      <guid>https://blog.fetinin.dev/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gonkey</title>
-      <link>/tags/gonkey/</link>
+      <link>https://blog.fetinin.dev/tags/gonkey/</link>
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/gonkey/</guid>
+      <guid>https://blog.fetinin.dev/tags/gonkey/</guid>
       <description></description>
     </item>
     
     <item>
       <title>testing</title>
-      <link>/tags/testing/</link>
+      <link>https://blog.fetinin.dev/tags/testing/</link>
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/testing/</guid>
+      <guid>https://blog.fetinin.dev/tags/testing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>architecture</title>
-      <link>/tags/architecture/</link>
+      <link>https://blog.fetinin.dev/tags/architecture/</link>
       <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/architecture/</guid>
+      <guid>https://blog.fetinin.dev/tags/architecture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>book</title>
-      <link>/tags/book/</link>
+      <link>https://blog.fetinin.dev/tags/book/</link>
       <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/book/</guid>
+      <guid>https://blog.fetinin.dev/tags/book/</guid>
       <description></description>
     </item>
     

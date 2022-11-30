@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>golang on Denis&#39; Digital Garden</title>
-    <link>/tags/golang/</link>
+    <link>https://blog.fetinin.dev/tags/golang/</link>
     <description>Recent content in golang on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Gonkey -- Testing automation tool</title>
-      <link>/posts/gonkey/introduction/</link>
+      <link>https://blog.fetinin.dev/posts/gonkey/introduction/</link>
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>/posts/gonkey/introduction/</guid>
+      <guid>https://blog.fetinin.dev/posts/gonkey/introduction/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/lamoda/gonkey&#34;&gt;Gonkey&lt;/a&gt; is a testing automation tool that can test your service API without a single line of code.&lt;/p&gt;</description>
     </item>
     
