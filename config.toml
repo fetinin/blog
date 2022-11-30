@@ -48,6 +48,7 @@ enableRobotsTXT = true
     minuteReadingTime = "min read"
     dateFormatSingle = "2006-01-02"
     dateFormatList = "2006-01-02"
+    sitename = "Denis' Digital Garden"
     # leave empty to disable, enter display text to enable
     # lastModDisplay = ""
 

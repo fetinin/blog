@@ -1,4 +1,5 @@
 ---
+title: "About"
 type: about
 avatar: photo.webp
 ---

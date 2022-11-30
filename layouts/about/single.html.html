@@ -1,9 +1,5 @@
 {{ define "main" }}
   <div class="post">
-    {{ if $.Param "automaticHeadings" | default true }}
-    <h1>{{ if .Params.heading }}{{ .Params.heading | markdownify }}{{ else }}{{ .Title | markdownify }}{{ end }}</h1>
-    {{ end }}
-
     <div class="post-content">
     {{ with .Resources.GetMatch .Params.Avatar }}
         <img src="{{ .RelPermalink }}" width="200" height="200" class="post-cover" style="float: right; margin: 0 15px 0 0; width: 200px; height: 200px;"/>
