@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k8s on Denis&#39; Digital Garden</title>
+    <link>https://blog.fetinin.dev/tags/k8s/</link>
+    <description>Recent content in k8s on Denis&#39; Digital Garden</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubectl cheatsheet</title>
+      <link>https://blog.fetinin.dev/posts/kubectl-cheatsheet/</link>
+      <pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.fetinin.dev/posts/kubectl-cheatsheet/</guid>
+      <description>&lt;p&gt;Throughout the years of using kubernetes as a developer I&amp;rsquo;ve collected a bunch of useful commands that helped me to debug issues and have better understanding of what is happening in the cluster.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

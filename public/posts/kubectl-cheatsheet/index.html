@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <title>Kubectl cheatsheet - Denis&#39; Digital Garden</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Throughout the years of using kubernetes as a developer I&rsquo;ve collected a bunch of useful commands that helped me to debug issues and have better understanding of what is happening in the cluster."/>
+
+<meta name="keywords" content="k8s, kubectl" />
+
+<link rel="canonical" href="https://blog.fetinin.dev/posts/kubectl-cheatsheet/" />
+
+
+
+<link href="https://blog.fetinin.dev/css/style.min.d7eaa42b716b9054e97e21ce1e9d5e077d37badbaf6e5f9cb2d8166237c177e3.css" rel="stylesheet" type="text/css" />
+
+
+<link href="https://blog.fetinin.dev/css/littlefoot.min.93e62d575e20d2da212a7bda914c2a4c3435cc9cca3ee2f32ddf0cebca1f0c92.css" rel="stylesheet" type="text/css" />
+
+
+<link rel="shortcut icon" href="https://blog.fetinin.dev/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kubectl cheatsheet"/>
+<meta name="twitter:description" content="Throughout the years of using kubernetes as a developer I&rsquo;ve collected a bunch of useful commands that helped me to debug issues and have better understanding of what is happening in the cluster."/>
+
+
+
+<meta property="og:title" content="Kubectl cheatsheet" />
+<meta property="og:description" content="Throughout the years of using kubernetes as a developer I&rsquo;ve collected a bunch of useful commands that helped me to debug issues and have better understanding of what is happening in the cluster." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.fetinin.dev/posts/kubectl-cheatsheet/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-12-10T00:00:00+00:00" /><meta property="og:site_name" content="Denis&#39; Digital Garden" />
+
+
+
+
+
+
+<link href="https://blog.fetinin.dev/css/fontawsome.min.be63a1dbf1a76c4127521f8b050d00fb2f3ed639bfa9ea84cea2f12f90d3264c.css" rel="stylesheet" type="text/css" rel="stylesheet" defer />
+
+
+  </head>
+  <body  class=" print-expand-urls">
+    <div class="container">
+      
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">~fetinin</span>
+  
+</a>
+
+    <div class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About Me</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About Me</a></li>
+      
+    
+      
+        <li><a href="/posts">Posts</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <div class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+      <div id="content" class="content">
+        
+  <div class="post">
+    <h1>Kubectl cheatsheet</h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          Published <time datetime="2022-12-10T00:00:00&#43;0000">2022-12-10</time>
+        </span>
+      
+        <span class="post-author">
+          by <a href="https://blog.fetinin.dev/">Denis Fetinin</a>
+        </span>
+        
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blog.fetinin.dev/tags/k8s/">k8s</a>&nbsp;
+        
+          #<a href="https://blog.fetinin.dev/tags/kubectl/">kubectl</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+        
+          <p>Throughout the years of using kubernetes as a developer I&rsquo;ve collected a bunch of useful commands that helped me to debug issues and have better understanding of what is happening in the cluster.</p>
+<p>List all namespaces</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get namespace
+</span></span></code></pre></div><p>List all pods in namespace <code>site</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods -n site
+</span></span></code></pre></div><p>Set default namespace</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl config set-context --current --namespace<span style="color:#f92672">=</span>&lt;namespace-name&gt;
+</span></span></code></pre></div><p>Watch for deploy of pods with label <code>app: discounts-endpoint-app</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods --selector<span style="color:#f92672">=</span>app<span style="color:#f92672">=</span>discounts-endpoint-app --watch
+</span></span></code></pre></div><p>Explain what parameters in deployment mean</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl explain deploy  
+</span></span><span style="display:flex;"><span>kubectl explain deploy.spec
+</span></span><span style="display:flex;"><span>kubectl explain deploy.spec.strategy
+</span></span></code></pre></div><p>Show pods sorted by how many times they were restarted</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods --sort-by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.status.containerStatuses[0].restartCount&#39;</span>
+</span></span></code></pre></div><p>Watch for container logs</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl logs &lt;pod-name&gt; -f  
+</span></span></code></pre></div><p>Show pod logs before restart</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl logs &lt;pod-name&gt; --previous
+</span></span></code></pre></div><p>Show pods container image version</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods -o custom-columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;NAME:metadata.name,IMAGES:spec.containers[*].image&#39;</span>
+</span></span></code></pre></div><p>Find pod by IP address</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods -o wide|grep 10.164.174.138
+</span></span></code></pre></div><p>List configmaps</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get configmap
+</span></span></code></pre></div><p>Show configmap content in YAML</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get configmap &lt;configmap-name&gt; -o yaml
+</span></span></code></pre></div><p>Useful links:</p>
+<ul>
+<li><a href="https://kubernetes.io/ru/docs/reference/kubectl/cheatsheet/">https://kubernetes.io/ru/docs/reference/kubectl/cheatsheet/</a></li>
+<li><a href="https://github.com/dennyzhang/cheatsheet-kubernetes-A4">https://github.com/dennyzhang/cheatsheet-kubernetes-A4</a></li>
+<li><a href="https://habr.com/ru/company/mailru/blog/502828/">https://habr.com/ru/company/mailru/blog/502828/</a></li>
+</ul>
+
+        
+      
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+          
+            <span class="button next">
+              <a href="https://blog.fetinin.dev/posts/safe-git-force-push/">
+                <span class="button__text">Safe git force push</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+      </div>
+
+      
+        
+<footer class="footer">
+  <div class="footer__inner">
+      
+        <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">~fetinin</span>
+  
+</a>
+
+      <div id="social-links">
+  <a href="https://www.linkedin.com/in/denis-fetinin" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://github.com/fetinin" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://www.t.me/fetinin" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-telegram"></i>
+  </a>
+  <a href="mailto:denka0087@gmail.com" target="_blank" rel="noopener noreferrer">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+  <a href="https://www.instagram.com/d.fetinin" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+
+      <div class="copyright">
+        <span>© 2022 </span>
+      </div>
+  </div>
+</footer>
+
+
+      
+    </div>
+
+    
+    <script src="https://blog.fetinin.dev/js/bundle.min.64d5b29b9db0b6948e81ffc647289009d7f100529bd3cda0bcc105dea1bf5f2b.js"></script>
+
+    
+    
+
+    <script src="/littlefoot.js"></script>
+<script>
+  const littlefootButtonTemplate = `
+<button
+  class="littlefoot__button"
+  id="<% reference %>"
+  title="Footnote <% number %>"
+>
+<svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M8,14H6V12H8V14M8,11H6V9H8V11M8,8H6V6H8V8M15,14H10V12H15V14M18,11H10V9H18V11M18,8H10V6H18V8Z" />
+</svg>
+</button>
+`;
+  littlefoot.littlefoot({
+      allowDuplicates: true,
+      buttonTemplate: littlefootButtonTemplate,
+      activateDelay: 0,
+  })
+</script>
+
+
+  </body>
+</html>

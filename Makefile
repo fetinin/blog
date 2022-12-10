@@ -9,3 +9,6 @@ release:
 	git add . &&\
 	git commit -m "Updated: `date +'%Y-%m-%d'`" &&\
 	git push
+
+serve:
+	hugo server --gc --printUnusedTemplates --templateMetrics -D

@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>k8s</title>
+      <link>https://blog.fetinin.dev/tags/k8s/</link>
+      <pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.fetinin.dev/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubectl</title>
+      <link>https://blog.fetinin.dev/tags/kubectl/</link>
+      <pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.fetinin.dev/tags/kubectl/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>git</title>
       <link>https://blog.fetinin.dev/tags/git/</link>

@@ -3,19 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.fetinin.dev/</loc>
-    <lastmod>2022-11-21T11:00:17+03:00</lastmod>
+    <lastmod>2022-12-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://blog.fetinin.dev/tags/k8s/</loc>
+    <lastmod>2022-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.fetinin.dev/tags/kubectl/</loc>
+    <lastmod>2022-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.fetinin.dev/posts/kubectl-cheatsheet/</loc>
+    <lastmod>2022-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.fetinin.dev/posts/</loc>
+    <lastmod>2022-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.fetinin.dev/tags/</loc>
+    <lastmod>2022-12-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.fetinin.dev/tags/git/</loc>
     <lastmod>2022-11-21T11:00:17+03:00</lastmod>
   </url><url>
-    <loc>https://blog.fetinin.dev/posts/</loc>
-    <lastmod>2022-11-21T11:00:17+03:00</lastmod>
-  </url><url>
     <loc>https://blog.fetinin.dev/posts/safe-git-force-push/</loc>
-    <lastmod>2022-11-21T11:00:17+03:00</lastmod>
-  </url><url>
-    <loc>https://blog.fetinin.dev/tags/</loc>
     <lastmod>2022-11-21T11:00:17+03:00</lastmod>
   </url><url>
     <loc>https://blog.fetinin.dev/tags/tip/</loc>

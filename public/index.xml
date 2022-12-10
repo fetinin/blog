@@ -6,7 +6,16 @@
     <description>Recent content on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubectl cheatsheet</title>
+      <link>https://blog.fetinin.dev/posts/kubectl-cheatsheet/</link>
+      <pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.fetinin.dev/posts/kubectl-cheatsheet/</guid>
+      <description>&lt;p&gt;Throughout the years of using kubernetes as a developer I&amp;rsquo;ve collected a bunch of useful commands that helped me to debug issues and have better understanding of what is happening in the cluster.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Safe git force push</title>
       <link>https://blog.fetinin.dev/posts/safe-git-force-push/</link>
@@ -52,7 +61,7 @@ Like to work in a small to medium teams and help understand business requirement
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://blog.fetinin.dev/debug/</guid>
-      <description>Last change time: 2022-11-21 11:00:17 +0300 MSK</description>
+      <description>Last change time: 2022-12-10 00:00:00 +0000 UTC</description>
     </item>
     
   </channel>
