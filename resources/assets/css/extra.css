@@ -36,3 +36,9 @@
 .posts-preview .post-title {
   margin-bottom: 10px;
 }
+
+/* commento */
+.commento-markdown-help pre {
+  display: block!important;
+}
+/* commento end */
