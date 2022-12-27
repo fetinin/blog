@@ -1,0 +1,135 @@
+name,ring,quadrant,isNew,description
+1C,adopt,platforms & infrastructure,FALSE,
+Active Directory,adopt,platforms & infrastructure,FALSE,Used to authenticate users and manage roles and permissions
+ActiveMQ,adopt,data management,FALSE,Message broker(we are considering other technologies for FC2021 project)
+Aerospike CE,adopt,data management,FALSE,"Used in different projects as a DB: inbox, chasm, recommendations, prism"
+Airflow 2.x,adopt,data management,FALSE,
+Allure,adopt,framework & tools,FALSE,Some teams use it to visualize functional test reports
+Angular,hold,framework & tools,FALSE,"We use Vue.js instead, несколько админок в RND; the main framework for WMS web-interface"
+Ansible,adopt,platforms & infrastructure,FALSE,Configuration management system we use to deploy and configure infrustructure
+Apache camel,adopt,framework & tools,FALSE,Used for rule-based message routing and mediation
+Artifactory,adopt,platforms & infrastructure,FALSE,"Used to store all out docker images, deployments, etc"
+Asterisk + kamailio,adopt,platforms & infrastructure,FALSE,The main voice transfer services
+AWS,assess,platforms & infrastructure,TRUE,Photo reviews service is hosted on
+Azure,adopt,platforms & infrastructure,FALSE,
+Azure DevOps,adopt,platforms & infrastructure,FALSE,
+Bamboo,adopt,platforms & infrastructure,FALSE,Our CI tool
+Bitbucket server,adopt,platforms & infrastructure,FALSE,Our version control service
+Blackfire,hold,framework & tools,FALSE,
+Bootstrap,adopt,framework & tools,FALSE,Used for admin panels
+Ceph,adopt,platforms & infrastructure,FALSE,
+Chef,hold,platforms & infrastructure,FALSE,
+Cisco,adopt,platforms & infrastructure,FALSE,
+Codeception,adopt,framework & tools,FALSE,
+CodeceptJS,assess,framework & tools,TRUE,Инструмент автоматизации UI тестирования Web
+Consul,hold,platforms & infrastructure,FALSE,We use Kubernetes instead
+Cucumber,adopt,framework & tools,FALSE,"We consider this technology to replace, this process is in progress; testing engine based on high-level step-by-step scenarios"
+Danger,assess,framework & tools,TRUE,"Инструмент для автоматического ревью пул реквестов. Пока внедрили в iOS, можно масшатировать на остальные платофрмы. Аналог SonarQube"
+Django,hold,framework & tools,FALSE,Still exists in some admin sites
+Docker,adopt,platforms & infrastructure,FALSE,All services are packaged as a docker images
+ElasticSearch,adopt,data management,FALSE,Used for logs and as a product search engine
+etcd,adopt,platforms & infrastructure,FALSE,
+FastLane,adopt,framework & tools,TRUE,
+Flask,adopt,framework & tools,FALSE,Основной инструмент для rpc серверов на питоне в rnd
+Ginkgo,adopt,framework & tools,TRUE,Инструмент автоматизации интеграционного тестирования
+Golang,adopt,languages,FALSE,Our mainstream language in digital
+Gonkey,adopt,framework & tools,FALSE,Инструмент автоматизации интеграционного тестирования
+Google Cloud Platform,hold,platforms & infrastructure,FALSE,We use AWS and Azure
+Grafana,adopt,platforms & infrastructure,FALSE,Out metrics dashboards here
+GraphQL,adopt,framework & tools,FALSE,Used in catalog service
+Greenplum,assess,data management,TRUE,
+Hadoop,adopt,data management,FALSE,
+HAProxy,adopt,platforms & infrastructure,FALSE,Used as a proxy server in front of DBs; currently the main WMS proxying and balancing tool - to be replaced in FC2021
+HBase,assess,data management,FALSE,
+Hive,adopt,data management,FALSE,"Hive это решение DE, мы через него лезем в Hadoop"
+Hyper-V,adopt,platforms & infrastructure,TRUE,
+Icinga,adopt,platforms & infrastructure,FALSE,Our alerts come from here
+Istio,hold,platforms & infrastructure,TRUE,
+Java 1.8,adopt,languages,FALSE,A JVM language used in core WMS backend modules - to be replaced by Kotlin and Java 11 during FC2021
+Java 11 ,assess,languages,FALSE,WMS will migrate to this during FC2021
+Java 17,assess,languages,TRUE,WMS new services
+Jest,adopt,framework & tools,FALSE,Online shop frontend unit tests
+JMeter,adopt,framework & tools,FALSE,Tool we use for load test
+Jupyterhub,adopt,framework & tools,FALSE,
+Kafka,adopt,data management,FALSE,Used as a event bus
+Kibana,adopt,framework & tools,FALSE,Elastic interface
+Kotlin,adopt,languages,FALSE,Mainstream language for android development
+Kotlin backend,trial,languages,FALSE,WMS uses it in some backend modules
+Kubernetes ,adopt,platforms & infrastructure,FALSE,Most of out services hosted in k8s
+Lua,hold,languages,FALSE,"This language has sertain and good area of usage, but we don't have this areas in Lamoda landscape"
+Mail.ru cloud,adopt,platforms & infrastructure,TRUE,"We will use it for project: Hybrid DRP, expend for BF resources"
+Microsoft Dynamics,adopt,platforms & infrastructure,FALSE,
+MongoDB,adopt,data management,FALSE,Used as an partially-structured data storage in one of MWS applications
+MySQL,hold,data management,FALSE,We use PostreSQL instead
+needle,adopt,framework & tools,TRUE,Cutting-edge фреймворк для DI в iOS
+NGINX Plus,adopt,platforms & infrastructure,FALSE,Used as a web-server for web interface in WMS
+Node.js,hold,framework & tools,FALSE,We have few services still using node.js. Like landing service
+Nomad,hold,platforms & infrastructure,FALSE,"We use Kubernetes instead (Саша Афенов предлагает убрать совсем с радара, потому что этой технологии уже нет физически 4 года)"
+NSQ,assess,data management,FALSE,
+OpenAPI (Swagger),adopt,framework & tools,FALSE,We describe out APIs on OpenAPI and then... we generate code using it
+OpenStack ,hold,platforms & infrastructure,FALSE,Very sensitive technology and complex to support by small team
+Oracle APEX,adopt,framework & tools,FALSE,
+OracleDB 19c,adopt,data management,FALSE,"Best DB, but very expensive for production usage"
+Pentaho DI ,adopt,data management,FALSE,We probably will migrate to Airflow
+PHP 7,adopt,languages,FALSE,
+PlantUML,adopt,framework & tools,FALSE,Used to draw diagrams
+PostgreSQL,adopt,data management,FALSE,Most off our services use pg to store data
+Postman,adopt,framework & tools,FALSE,Tool we use to make manual testing easier
+Power BI,adopt,data management,FALSE,
+Prometheus,adopt,platforms & infrastructure,FALSE,We store our metrics here
+Protobuf,assess,framework & tools,FALSE,
+Pytest,adopt,framework & tools,FALSE,Фреймворк UnitTest-ов python
+Python 3.x,adopt,languages,FALSE,Most of out python services have written on or have migrated to
+R,hold,languages,FALSE,
+RabbitMQ,adopt,data management,FALSE,Message broker we use in some our services
+Redis,adopt,data management,FALSE,Cache and fast key-value DB
+RoadRunner,hold,framework & tools,FALSE,
+RoadRunner 2,adopt,framework & tools,TRUE,
+SAP Business Objects,adopt,data management,FALSE,
+Scala ,adopt,languages,FALSE,"Scala was used by LT office, but in general we don't need this extra language to support"
+Selenium,adopt,framework & tools,FALSE,
+Sentry,adopt,platforms & infrastructure,FALSE,One of our service monitoring tool
+Solr,hold,data management,FALSE,We use ElasticSearch instead
+SonarQube,adopt,platforms & infrastructure,FALSE,Inspection of code quality for php apps; java apps as well
+Sourcery,adopt,framework & tools,TRUE,"Инструмент генерации кода. Активно используем в iOS для генерации экспериментов, кодов ошибок АПИ, моков для unit-тестов"
+Spark 2 ,hold,data management,FALSE,
+Spark 3,assess,data management,TRUE,
+Spring,adopt,framework & tools,FALSE,The main framework for WMS services during FC2021
+Spring Boot,adopt,framework & tools,FALSE,Used to configure and bootstrap stand-alone WMS services
+Superset,hold,framework & tools,FALSE,We use Power BI instead
+Swift,adopt,languages,FALSE,Mainstream language for iOS development
+Swift Package Manager,adopt,framework & tools,TRUE,Cutting-edge менеджер зависимостей в iOS
+SwiftFormat,trial,framework & tools,TRUE,Инстheмент для автоматического форматирования кода
+SwiftLint,adopt,framework & tools,TRUE,Линтер в iOS
+Symfony 6,adopt,framework & tools,TRUE,Main framework & components for our php apps
+Symfony 4/5,adopt,framework & tools,FALSE,Main framework & components for our php apps
+TensorFlow,adopt,platforms & infrastructure,FALSE,
+Terraform,assess,platforms & infrastructure,TRUE,
+TestRail,trial,framework & tools,FALSE,Main Test Management System
+Thanos,hold,platforms & infrastructure,FALSE,Our prometheus setup to store metrics longer
+TypeScript,adopt,languages,FALSE,
+uWSGI,adopt,platforms & infrastructure,FALSE,Used for multiprocessed deployment of python WSGI applications
+Vertica 10,adopt,data management,FALSE,
+VMWare,hold,platforms & infrastructure,FALSE,
+vue.js,adopt,framework & tools,FALSE,Mainstream framework for front-end development
+Webpack,adopt,framework & tools,FALSE,JavaScript module bundler
+WildFly,hold,platforms & infrastructure,TRUE,We use Spring instead; core WMS application runs on it
+WireMock,adopt,framework & tools,FALSE,We use WireMock with Dev/QA environment for Go and PHP apps
+Xcodegen,adopt,framework & tools,TRUE,Инструмент генерации файла проекта xcode. Позволяет избегать большого колечества мерж-конфликтов
+XCUITest,assess,framework & tools,TRUE,Фреймворк для UI-тестирования в iOS
+Zabbix,trial,platforms & infrastructure,TRUE,We plan to use it again
+Zend Framework,hold,framework & tools,FALSE,We use Symfony instead
+MS SQL,adopt,data management,FALSE,
+Trino,assess,data management,TRUE,SQL over different storages
+clear.ml,assess,data management,TRUE,Tool for ML Ops and Experiment management
+Clickhouse,assess,data management,TRUE,
+CatBoost,adopt,framework & tools,TRUE,Gradient Boosting Library
+XGBoost,adopt,framework & tools,TRUE,Gradient Boosting Library
+Yandex Cloud,assess,platforms & infrastructure,TRUE,
+Kafka Streams,assess,data management,TRUE,
+ksqlDB,assess,data management,TRUE,
+TiDB,assess,data management,TRUE,
+CockroachDB,assess,data management,TRUE,
+PHP 8,adopt,languages,TRUE,
+TEST IT,assess,framework & tools,TRUE,Main Test Management System
+Laminas,trial,framework & tools,TRUE,Framework & components for migrate our old php apps on zend
