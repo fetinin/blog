@@ -54,7 +54,7 @@ if slices.Contains(a, toFind) {
 // Before
 a := []int{1, 2, 3}  
 val, insertIdx := 4, 1  
-// disclaimer: not the best way to insert into a slice, just proofs that  
+// disclaimer: not the best way to insert into a slice  
 b := append(a[:insertIdx], append([]int{val}, a[insertIdx:]...)...) // [1 4 2 3]
 
 // After

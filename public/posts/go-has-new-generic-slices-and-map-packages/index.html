@@ -34,7 +34,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.fetinin.dev/posts/go-has-new-generic-slices-and-map-packages/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-03-05T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-03-25T13:12:28+07:00" /><meta property="og:site_name" content="Denis&#39; Digital Garden" />
+<meta property="article:modified_time" content="2023-03-25T13:21:08+07:00" /><meta property="og:site_name" content="Denis&#39; Digital Garden" />
 
 
 
@@ -123,7 +123,7 @@
         
           
           <p class="post-updated-date">
-            Last update: <time datetime="2023-03-25T13:12:28&#43;0700">2023-03-25</time>
+            Last update: <time datetime="2023-03-25T13:21:08&#43;0700">2023-03-25</time>
           </p>
           
         
@@ -180,7 +180,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// Before
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}  
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">val</span>, <span style="color:#a6e22e">insertIdx</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>  
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// disclaimer: not the best way to insert into a slice, just proofs that  
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// disclaimer: not the best way to insert into a slice  
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> append(<span style="color:#a6e22e">a</span>[:<span style="color:#a6e22e">insertIdx</span>], append([]<span style="color:#66d9ef">int</span>{<span style="color:#a6e22e">val</span>}, <span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">insertIdx</span>:]<span style="color:#f92672">...</span>)<span style="color:#f92672">...</span>) <span style="color:#75715e">// [1 4 2 3]
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// After
