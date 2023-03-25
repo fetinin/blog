@@ -4,7 +4,6 @@ date: 2023-03-05
 draft: false
 tags: [golang]
 ---
-## More Generics in the Standard Library
 Since the introduction of generics in Go 1.18, there have been discussions about adding new helper functions to the standard library to cover most frequent operations. After more than a year, two new libraries with generics will be added[^1][^2] into the Go standard library starting from Go 1.21.
 <!--more-->
 You can already find them here:
