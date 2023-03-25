@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go has new generic slices and map packages</title>
+      <link>https://blog.fetinin.dev/posts/go-has-new-generic-slices-and-map-packages/</link>
+      <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.fetinin.dev/posts/go-has-new-generic-slices-and-map-packages/</guid>
+      <description>&lt;h2 id=&#34;more-generics-in-the-standard-library&#34;&gt;More Generics in the Standard Library&lt;/h2&gt;
+&lt;p&gt;Since the introduction of generics in Go 1.18, there have been discussions about adding new helper functions to the standard library to cover most frequent operations. After more than a year, two new libraries with generics will be added&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; into the Go standard library starting from Go 1.21.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Kubectl cheatsheet</title>
       <link>https://blog.fetinin.dev/posts/kubectl-cheatsheet/</link>
@@ -42,6 +52,15 @@
       <guid>https://blog.fetinin.dev/posts/fundamentals-of-software-architecture-overview/part-1.-who-is-an-architect/</guid>
       <description>Fundamentals of software architecture is a book by Mark Richards and Neal Ford — hands-on practitioners who have taught software architecture classes professionally for years—focus on architecture principles that apply across all technology stacks.
 This book left me with good basis of what role software architect plays in a company and extended my knowledge of different architecture patterns. In the following series of articles I&amp;rsquo;ll write about topics from this book that I liked most.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://blog.fetinin.dev/posts/blogposts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.fetinin.dev/posts/blogposts/</guid>
+      <description></description>
     </item>
     
   </channel>

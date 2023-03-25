@@ -3,8 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.fetinin.dev/</loc>
-    <lastmod>2022-12-10T14:36:20+03:00</lastmod>
+    <lastmod>2023-03-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://blog.fetinin.dev/posts/go-has-new-generic-slices-and-map-packages/</loc>
+    <lastmod>2023-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.fetinin.dev/tags/golang/</loc>
+    <lastmod>2023-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.fetinin.dev/posts/</loc>
+    <lastmod>2023-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.fetinin.dev/tags/</loc>
+    <lastmod>2023-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.fetinin.dev/tags/k8s/</loc>
     <lastmod>2022-12-10T14:36:20+03:00</lastmod>
@@ -15,12 +27,6 @@
     <loc>https://blog.fetinin.dev/posts/kubectl-cheatsheet/</loc>
     <lastmod>2022-12-10T14:36:20+03:00</lastmod>
   </url><url>
-    <loc>https://blog.fetinin.dev/posts/</loc>
-    <lastmod>2022-12-10T14:36:20+03:00</lastmod>
-  </url><url>
-    <loc>https://blog.fetinin.dev/tags/</loc>
-    <lastmod>2022-12-10T14:36:20+03:00</lastmod>
-  </url><url>
     <loc>https://blog.fetinin.dev/tags/git/</loc>
     <lastmod>2022-11-21T11:00:17+03:00</lastmod>
   </url><url>
@@ -29,9 +35,6 @@
   </url><url>
     <loc>https://blog.fetinin.dev/tags/tip/</loc>
     <lastmod>2022-11-21T11:00:17+03:00</lastmod>
-  </url><url>
-    <loc>https://blog.fetinin.dev/tags/golang/</loc>
-    <lastmod>2022-11-16T10:46:11+03:00</lastmod>
   </url><url>
     <loc>https://blog.fetinin.dev/tags/gonkey/</loc>
     <lastmod>2022-11-16T10:46:11+03:00</lastmod>
@@ -50,6 +53,8 @@
   </url><url>
     <loc>https://blog.fetinin.dev/posts/fundamentals-of-software-architecture-overview/part-1.-who-is-an-architect/</loc>
     <lastmod>2022-12-10T14:36:20+03:00</lastmod>
+  </url><url>
+    <loc>https://blog.fetinin.dev/posts/blogposts/</loc>
   </url><url>
     <loc>https://blog.fetinin.dev/about/</loc>
     <lastmod>2022-11-30T22:05:32+03:00</lastmod>
