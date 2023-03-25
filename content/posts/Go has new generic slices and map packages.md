@@ -73,7 +73,8 @@ areEqual := true
 for i, _ := range a {  
    if a[i] != b[i] {  
       areEqual = false  
-      break   }  
+      break
+    }  
 }
 fmt.Print(areEqual) // true
 
@@ -83,7 +84,6 @@ b := []int{1, 2, 3}
 areEqual := slices.Equal(a, b)
 fmt.Print(areEqual) // true
 ```
-
 ### Grow slice
 ```go
 // Before
@@ -98,9 +98,6 @@ a := slices.Grow([]int{1}, 5)
 fmt.Printf("slice cap: %v", cap(a)) // 6
 fmt.Printf("slice len: %v", len(a) //  1
 ```
-
-
-Sentence about that this is not full all library API is covered here, read more at https://pkg.go.dev/golang.org/x/exp/slices
 
 [^1]: https://github.com/golang/go/issues/57433
 [^2]: https://github.com/golang/go/issues/57436
