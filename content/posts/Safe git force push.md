@@ -4,7 +4,7 @@ date: 2022-11-16
 draft: false
 tags: ["git", "tip"]
 ---
-You've likely been in this situation before. You make some minor code fixes, do `git commit --ammend` to add them to the current commit, and do `git push --force`. Then, you happily open pull request and see that you've deleted you're colleagues commit.😩
+You've likely been in this situation before. You make some minor code fixes, do `git commit --amend` to add them to the current commit, and do `git push --force`. Then, you happily open pull request and see that you've deleted you're colleagues commit.😩
 <!--more-->
 This doesn't happen so often, but when it does, it's a bummer. Happily, the solution is simple.
 

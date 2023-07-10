@@ -5,7 +5,7 @@
     <link>https://blog.fetinin.dev/tags/k8s/</link>
     <description>Recent content in k8s on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Sat, 10 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubectl cheatsheet</title>
