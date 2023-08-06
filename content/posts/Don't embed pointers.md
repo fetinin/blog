@@ -191,4 +191,5 @@ func main() {
 ```
 
 I hope that you learned something new, and this article will save you from confusing errors in production.
-Have you encountered this problem? In what cases is an embedded struct pointer necessary? Leave a comment below.
+
+Have you encountered this problem? In what cases is an embedded struct pointer necessary? Leave a comment, let's discuss.
