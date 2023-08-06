@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Denis&#39; Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Don&#39;t embed pointers</title>
+      <link>https://blog.fetinin.dev/posts/dont-embed-pointers/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.fetinin.dev/posts/dont-embed-pointers/</guid>
+      <description>&lt;p&gt;In Go, it&amp;rsquo;s important to be aware of potential bugs when embedding pointers within structs. This article explores such a scenario and provides alternative solutions to avoid confusion and errors.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Go has new generic slices and map packages</title>
       <link>https://blog.fetinin.dev/posts/go-has-new-generic-slices-and-map-packages/</link>

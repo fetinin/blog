@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <title>Don&#39;t embed pointers - Denis&#39; Digital Garden</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="In Go, it&rsquo;s important to be aware of potential bugs when embedding pointers within structs. This article explores such a scenario and provides alternative solutions to avoid confusion and errors."/>
+
+<meta name="keywords" content="golang" />
+
+<link rel="canonical" href="https://blog.fetinin.dev/posts/dont-embed-pointers/" />
+
+
+
+<link href="https://blog.fetinin.dev/css/style.min.873d97aa3b55ca54b1c126d50123328881d93ce94db203de1af835bd55a16c9d.css" rel="stylesheet" type="text/css" />
+
+
+<link href="https://blog.fetinin.dev/css/littlefoot.min.93e62d575e20d2da212a7bda914c2a4c3435cc9cca3ee2f32ddf0cebca1f0c92.css" rel="stylesheet" type="text/css" />
+
+
+<link rel="shortcut icon" href="https://blog.fetinin.dev/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Don&#39;t embed pointers"/>
+<meta name="twitter:description" content="In Go, it&rsquo;s important to be aware of potential bugs when embedding pointers within structs. This article explores such a scenario and provides alternative solutions to avoid confusion and errors."/>
+
+
+
+<meta property="og:title" content="Don&#39;t embed pointers" />
+<meta property="og:description" content="In Go, it&rsquo;s important to be aware of potential bugs when embedding pointers within structs. This article explores such a scenario and provides alternative solutions to avoid confusion and errors." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.fetinin.dev/posts/dont-embed-pointers/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-06T00:00:00+00:00" />
+
+
+
+
+
+<link href="https://blog.fetinin.dev/css/fontawsome.min.be63a1dbf1a76c4127521f8b050d00fb2f3ed639bfa9ea84cea2f12f90d3264c.css" rel="stylesheet" type="text/css" rel="stylesheet" defer />
+
+
+  </head>
+  <body  class=" print-expand-urls">
+    <div class="container">
+      
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">~fetinin</span>
+  
+</a>
+
+    <div class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About Me</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About Me</a></li>
+      
+    
+      
+        <li><a href="/posts">Posts</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <div class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+      <div id="content" class="content">
+        
+  <div class="post">
+    <h1>Don&rsquo;t embed pointers</h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          Published <time datetime="2023-08-06T00:00:00&#43;0000">2023-08-06</time>
+        </span>
+      
+        <span class="post-author">
+          by <a href="https://blog.fetinin.dev/">Denis Fetinin</a>
+        </span>
+        
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://blog.fetinin.dev/tags/golang/">golang</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+        
+          <p>In Go, it&rsquo;s important to be aware of potential bugs when embedding pointers within structs. This article explores such a scenario and provides alternative solutions to avoid confusion and errors.</p>
+<h2 id="can-you-spot-the-bug-in-the-following-code">Can you spot the bug in the following code?</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">BookMetaInfo</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">IsBestseller</span> <span style="color:#66d9ef">bool</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Rating</span>      <span style="color:#66d9ef">float64</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Book</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">*</span><span style="color:#a6e22e">BookMetaInfo</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Title</span>  <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Author</span> <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">book</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">GetBook</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">Rating</span> &gt; <span style="color:#ae81ff">4.5</span> { <span style="color:#75715e">// line 19
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">IsBestseller</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Book %+v:&#34;</span>, <span style="color:#a6e22e">book</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">GetBook</span>() <span style="color:#a6e22e">Book</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Book</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Title</span>:  <span style="color:#e6db74">&#34;The Great Gatsby&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Author</span>: <span style="color:#e6db74">&#34;F. Scott Fitzgerald&#34;</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>When you run this program, it crashes with a nil pointer dereference error on line 19.</p>
+<pre tabindex="0"><code class="language-panic:" data-lang="panic:">[signal SIGSEGV: segmentation violation code=0x1 addr=0x8 pc=0x482c99]
+
+goroutine 1 [running]:
+main.main()
+	/tmp/sandbox717552125/prog.go:19 +0x59
+</code></pre><p><a href="https://go.dev/play/p/u7mekOcO7r8">Playground</a></p>
+<p>But how is that possible? Both <code>Book</code> and <code>Raiting</code> are not pointers. I think you already guessed what&rsquo;s causing the issue by the name of this article. This occurs because ﻿<code>BookMetaInfo</code> is embedded as a pointer within the ﻿Book struct.</p>
+<h2 id="identifying-the-issue">Identifying the Issue</h2>
+<p>So does it mean that all fields inside <code>BookMetaInfo</code> are pointers? To address the issue, you might consider adding a ﻿nil check:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">BookMetaInfo</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">IsBestseller</span> <span style="color:#66d9ef">bool</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Rating</span>      <span style="color:#66d9ef">float64</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Book</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">*</span><span style="color:#a6e22e">BookMetaInfo</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Title</span>  <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Author</span> <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">book</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">GetBook</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">Rating</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">Rating</span> &gt; <span style="color:#ae81ff">4.5</span> { <span style="color:#75715e">// &lt;-- add nil check
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">IsBestseller</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Book: %+v&#34;</span>, <span style="color:#a6e22e">book</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">GetBook</span>() <span style="color:#a6e22e">Book</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Book</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Title</span>:  <span style="color:#e6db74">&#34;The Great Gatsby&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Author</span>: <span style="color:#e6db74">&#34;F. Scott Fitzgerald&#34;</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><a href="https://go.dev/play/p/NhgnC92u00i">Playground</a></p>
+<p>But now if you run this program it will lead to another error:
+<code>./prog.go:19:21: invalid operation: book.Rating != nil (mismatched types float64 and untyped nil)</code></p>
+<p>What the hell? We can&rsquo;t reference <code>Rating</code> field because it&rsquo;s nil and we can&rsquo;t check it for <code>nil</code> because it&rsquo;s not a pointer. What should we do?</p>
+<h2 id="possible-solution">Possible Solution</h2>
+<p>To correctly determine if ﻿<code>Rating</code> exist, it is necessary to check whether ﻿<code>BookMetaInfo</code> itself is ﻿not <code>nil</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">BookMetaInfo</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">IsBestseller</span> <span style="color:#66d9ef">bool</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Rating</span>      <span style="color:#66d9ef">float64</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Book</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">*</span><span style="color:#a6e22e">BookMetaInfo</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Title</span>  <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Author</span> <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">book</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">GetBook</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">BookMetaInfo</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">Rating</span> &gt; <span style="color:#ae81ff">4.5</span> { <span style="color:#75715e">// &lt;-- add check BookMetaInfo is not nil
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">IsBestseller</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Book: %+v&#34;</span>, <span style="color:#a6e22e">book</span>) <span style="color:#75715e">// Book: {BookMetaInfo:&lt;nil&gt; Title:The Great Gatsby Author:F. Scott Fitzgerald}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">GetBook</span>() <span style="color:#a6e22e">Book</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Book</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Title</span>:  <span style="color:#e6db74">&#34;The Great Gatsby&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Author</span>: <span style="color:#e6db74">&#34;F. Scott Fitzgerald&#34;</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>It fixes the problem, but I hope that you agree with me that this check is not obvious. If you encounter this code for the first time and are not familiar with the Book struct type yet, you may think that checking a field that we don&rsquo;t use is redundant, and removing it will not cause any compile issues. Linters also won&rsquo;t help here. At least, I&rsquo;m not aware of such a linter.</p>
+<h2 id="propper-solution">Propper Solution</h2>
+<p>All above issues can be simply avoided. Just don&rsquo;t embed pointer.</p>
+<p>To prevent confusion and errors caused by embedding pointers, two alternative approaches can be adopted.</p>
+<ol>
+<li>Embed ﻿BookMetaInfo as a value:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">BookMetaInfo</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">IsBestseller</span> <span style="color:#66d9ef">bool</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Rating</span>      <span style="color:#66d9ef">float64</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Book</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">BookMetaInfo</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Title</span>  <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Author</span> <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">book</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">GetBook</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">Rating</span> &gt; <span style="color:#ae81ff">4.5</span> { <span style="color:#75715e">// &lt;-- all good
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">IsBestseller</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="2">
+<li>Or, as in our case, since <code>BookMetaInfo</code> is optional I would leave it as a pointer but explicitly set it as a separate field. This would remove all confusion.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">BookMetaInfo</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">IsBestseller</span> <span style="color:#66d9ef">bool</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Ratings</span>      <span style="color:#66d9ef">float64</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Book</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">MetaInfo</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">BookMetaInfo</span> <span style="color:#75715e">// &lt;-- Metainfo is optional field
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">Title</span>  <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Author</span> <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">book</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">GetBook</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">MetaInfo</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">MetaInfo</span>.<span style="color:#a6e22e">Rating</span> &gt; <span style="color:#ae81ff">4.5</span> { <span style="color:#75715e">// &lt;-- now check is more obvious
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">MetaInfo</span>.<span style="color:#a6e22e">IsBestseller</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>I hope that you learned something new, and this article will save you from confusing errors in production.
+Have you encountered this problem? In what cases is an embedded struct pointer necessary? Leave a comment below.</p>
+
+        
+      
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+          
+            <span class="button next">
+              <a href="https://blog.fetinin.dev/posts/go-has-new-generic-slices-and-map-packages/">
+                <span class="button__text">Go has new generic slices and map packages</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    <script defer src="https://blog-comments.fly.dev/js/commento.js"></script>
+<div id="commento"></div>
+    </div>
+
+      </div>
+
+      
+        
+<footer class="footer">
+  <div class="footer__inner">
+      
+        <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">~fetinin</span>
+  
+</a>
+
+      <div id="social-links">
+  <a href="https://www.linkedin.com/in/denis-fetinin" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://github.com/fetinin" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://www.t.me/fetinin" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-telegram"></i>
+  </a>
+  <a href="mailto:denka0087@gmail.com" target="_blank" rel="noopener noreferrer">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+  <a href="https://www.instagram.com/d.fetinin" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+
+      <div class="copyright">
+        <span>© 2023 </span>
+      </div>
+  </div>
+</footer>
+
+
+      
+    </div>
+
+    
+    <script src="https://blog.fetinin.dev/js/bundle.min.64d5b29b9db0b6948e81ffc647289009d7f100529bd3cda0bcc105dea1bf5f2b.js"></script>
+
+    
+    
+
+    <script src="/littlefoot.js"></script>
+<script>
+  const littlefootButtonTemplate = `
+<button
+  class="littlefoot__button"
+  id="<% reference %>"
+  title="Footnote <% number %>"
+>
+<svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M8,14H6V12H8V14M8,11H6V9H8V11M8,8H6V6H8V8M15,14H10V12H15V14M18,11H10V9H18V11M18,8H10V6H18V8Z" />
+</svg>
+</button>
+`;
+  littlefoot.littlefoot({
+      allowDuplicates: true,
+      buttonTemplate: littlefootButtonTemplate,
+      activateDelay: 0,
+  })
+</script>
+
+
+  </body>
+</html>
