@@ -15,7 +15,7 @@ enableRobotsTXT = true
   defaultTheme = "light"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 3
 
   # Show reading time in minutes for posts
   showReadingTime = true
@@ -65,10 +65,16 @@ enableRobotsTXT = true
         identifier = "Posts"
         name = "Posts"
         url = "/posts"
+
       [[languages.en.menu.header]]
         identifier = "about"
         name = "About Me"
         url = "/about"
+
+      [[languages.en.menu.header]]
+        identifier = "speaking"
+        name = "Public speaking"
+        url = "/speaking"
 
 [[module.mounts]]
   source = 'resources/assets'

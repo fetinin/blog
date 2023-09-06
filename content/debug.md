@@ -2,4 +2,4 @@
 title: Debug info
 private: true
 ---
-Last change time: {{% lastchange %}}
+Last update time: {{% lastchange %}}
