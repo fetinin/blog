@@ -38,7 +38,7 @@ enableRobotsTXT = true
 [languages.en.params]
   title = "Denis' Digital Garden"
   subtitle = "Software Engineer Blog"
-  keywords = "Denis Fetinin,software blog,e-commerce,blog,golang blog"
+  keywords = "Denis Fetinin,software blog,blog,golang blog"
   copyright = ""
   menuMore = "Show more"
   writtenBy = "Written by"
