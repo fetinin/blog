@@ -30,51 +30,52 @@ enableRobotsTXT = true
 
   sortTaxonomiesByCount = true
 
-  [params.author]
+[params.author]
   name = "Denis Fetinin"
 
 [languages]
-  [languages.en]
-    title = "Denis' Digital Garden"
-    subtitle = "Software Engineer Blog"
-    keywords = "Denis Fetinin,software blog,e-commerce,blog,golang blog"
-    copyright = ""
-    menuMore = "Show more"
-    writtenBy = "Written by"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-    newerPosts = "Newer posts"
-    olderPosts = "Older posts"
-    minuteReadingTime = "min read"
-    dateFormatSingle = "2006-01-02"
-    dateFormatList = "2006-01-02"
-    sitename = "Denis' Digital Garden"
-    # leave empty to disable, enter display text to enable
-    # lastModDisplay = ""
+[languages.en]
+[languages.en.params]
+  title = "Denis' Digital Garden"
+  subtitle = "Software Engineer Blog"
+  keywords = "Denis Fetinin,software blog,e-commerce,blog,golang blog"
+  copyright = ""
+  menuMore = "Show more"
+  writtenBy = "Written by"
+  readMore = "Read more"
+  readOtherPosts = "Read other posts"
+  newerPosts = "Newer posts"
+  olderPosts = "Older posts"
+  minuteReadingTime = "min read"
+  dateFormatSingle = "2006-01-02"
+  dateFormatList = "2006-01-02"
+  sitename = "Denis' Digital Garden"
+  # leave empty to disable, enter display text to enable
+  # lastModDisplay = ""
 
-    [languages.en.params.logo]
-      logoText = "~fetinin"
-      logoHomeLink = "/"
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
+[languages.en.params.logo]
+  logoText = "~fetinin"
+  logoHomeLink = "/"
+  # or
+  #
+  # path = "/img/your-example-logo.svg"
+  # alt = "Your example logo alt text"
 
-    [languages.en.menu]
-      [[languages.en.menu.header]]
-        identifier = "Posts"
-        name = "Posts"
-        url = "/posts"
+[languages.en.menu]
+[[languages.en.menu.header]]
+  identifier = "Posts"
+  name = "Posts"
+  url = "/posts"
 
-      [[languages.en.menu.header]]
-        identifier = "about"
-        name = "About Me"
-        url = "/about"
+[[languages.en.menu.header]]
+  identifier = "about"
+  name = "About Me"
+  url = "/about"
 
-      [[languages.en.menu.header]]
-        identifier = "speaking"
-        name = "Public speaking"
-        url = "/speaking"
+[[languages.en.menu.header]]
+  identifier = "speaking"
+  name = "Public speaking"
+  url = "/speaking"
 
 [[module.mounts]]
   source = 'resources/assets'
