@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>git on </title>
+    <title>Git on </title>
     <link>https://blog.fetinin.dev/tags/git/</link>
-    <description>Recent content in git on </description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Git on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Jul 2023 12:18:41 +0300</lastBuildDate>
+    <atom:link href="https://blog.fetinin.dev/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Safe git force push</title>
       <link>https://blog.fetinin.dev/posts/safe-git-force-push/</link>
       <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://blog.fetinin.dev/posts/safe-git-force-push/</guid>
       <description>&lt;p&gt;You&amp;rsquo;ve likely been in this situation before. You make some minor code fixes, do &lt;code&gt;git commit --amend&lt;/code&gt; to add them to the current commit, and do &lt;code&gt;git push --force&lt;/code&gt;. Then, you happily open pull request and see that you&amp;rsquo;ve deleted you&amp;rsquo;re colleagues commit.😩&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

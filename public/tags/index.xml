@@ -4,89 +4,58 @@
     <title>Tags on </title>
     <link>https://blog.fetinin.dev/tags/</link>
     <description>Recent content in Tags on </description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.fetinin.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Aug 2023 13:43:05 +0300</lastBuildDate>
+    <atom:link href="https://blog.fetinin.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>golang</title>
+      <title>Golang</title>
       <link>https://blog.fetinin.dev/tags/golang/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://blog.fetinin.dev/tags/golang/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>k8s</title>
+      <title>K8s</title>
       <link>https://blog.fetinin.dev/tags/k8s/</link>
       <pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://blog.fetinin.dev/tags/k8s/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>kubectl</title>
+      <title>Kubectl</title>
       <link>https://blog.fetinin.dev/tags/kubectl/</link>
       <pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://blog.fetinin.dev/tags/kubectl/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>git</title>
+      <title>Git</title>
       <link>https://blog.fetinin.dev/tags/git/</link>
       <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://blog.fetinin.dev/tags/git/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tip</title>
+      <title>Tip</title>
       <link>https://blog.fetinin.dev/tags/tip/</link>
       <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://blog.fetinin.dev/tags/tip/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>gonkey</title>
+      <title>Gonkey</title>
       <link>https://blog.fetinin.dev/tags/gonkey/</link>
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://blog.fetinin.dev/tags/gonkey/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>testing</title>
+      <title>Testing</title>
       <link>https://blog.fetinin.dev/tags/testing/</link>
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://blog.fetinin.dev/tags/testing/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>architecture</title>
-      <link>https://blog.fetinin.dev/tags/architecture/</link>
-      <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.fetinin.dev/tags/architecture/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>book</title>
-      <link>https://blog.fetinin.dev/tags/book/</link>
-      <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.fetinin.dev/tags/book/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <title>Стратегии декомпозиции монолита - Denis&#39; Digital Garden</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Все материалы: 1698499817097 Split monolith
+Варианты по распила:
+
+Сначала данные
+Сначала код
+
+Варианты по коду:
+
+Stranglers fig
+
+Strangler pattern approach to migrating applications — pros and cons;
+Strangler Pattern in practice.
+
+
+Tactical Forking
+
+[en] первое упоминание подхода было за авторством Fausto De La Torre;
+[en] ещё больше информации о tactical forking подходе можно найти в четвёртой главе Software Architecture The Hard Parts (Chapter 4. Architectural Decomposition, Tactical Forking).
+
+
+volatility-based-подход
+
+ Volatility Based Decomposition Example;
+Volatility based decomposition for Microservices.
+
+
+"/>
+
+<link rel="canonical" href="http://localhost:1313/posts/%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B8-%D0%B4%D0%B5%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B8-%D0%BC%D0%BE%D0%BD%D0%BE%D0%BB%D0%B8%D1%82%D0%B0/" />
+
+
+
+<link href="http://localhost:1313/css/style.min.873d97aa3b55ca54b1c126d50123328881d93ce94db203de1af835bd55a16c9d.css" rel="stylesheet" type="text/css" />
+
+
+<link href="http://localhost:1313/css/littlefoot.min.d93fb133b90906cbdfa42e1225cc3bc7641b9ad529c8aa4a844cd63e76c0eef1.css" rel="stylesheet" type="text/css" />
+
+
+<link rel="shortcut icon" href="http://localhost:1313/img/favicon.png">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Стратегии декомпозиции монолита">
+  <meta name="twitter:description" content="Все материалы: 1698499817097 Split monolith
+Варианты по распила:
+Сначала данные Сначала код Варианты по коду:
+Stranglers fig Strangler pattern approach to migrating applications — pros and cons; Strangler Pattern in practice. Tactical Forking [en] первое упоминание подхода было за авторством Fausto De La Torre; [en] ещё больше информации о tactical forking подходе можно найти в четвёртой главе Software Architecture The Hard Parts (Chapter 4. Architectural Decomposition, Tactical Forking). volatility-based-подход Volatility Based Decomposition Example; Volatility based decomposition for Microservices.">
+
+
+
+<meta property="og:url" content="http://localhost:1313/posts/%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B8-%D0%B4%D0%B5%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B8-%D0%BC%D0%BE%D0%BD%D0%BE%D0%BB%D0%B8%D1%82%D0%B0/">
+  <meta property="og:site_name" content="Denis&#39; Digital Garden">
+  <meta property="og:title" content="Стратегии декомпозиции монолита">
+  <meta property="og:description" content="Все материалы: 1698499817097 Split monolith
+Варианты по распила:
+Сначала данные Сначала код Варианты по коду:
+Stranglers fig Strangler pattern approach to migrating applications — pros and cons; Strangler Pattern in practice. Tactical Forking [en] первое упоминание подхода было за авторством Fausto De La Torre; [en] ещё больше информации о tactical forking подходе можно найти в четвёртой главе Software Architecture The Hard Parts (Chapter 4. Architectural Decomposition, Tactical Forking). volatility-based-подход Volatility Based Decomposition Example; Volatility based decomposition for Microservices.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-10-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-10-28T00:00:00+00:00">
+
+
+
+
+
+<link href="http://localhost:1313/css/fontawsome.min.be63a1dbf1a76c4127521f8b050d00fb2f3ed639bfa9ea84cea2f12f90d3264c.css" rel="stylesheet" type="text/css" rel="stylesheet" defer />
+
+
+  </head>
+  <body  class=" print-expand-urls">
+    <div class="container">
+      
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">~fetinin</span>
+  
+</a>
+
+    <div class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About Me</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+        
+          <li><a href="/speaking">Public speaking</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About Me</a></li>
+      
+    
+      
+        <li><a href="/posts">Posts</a></li>
+      
+    
+      
+        <li><a href="/speaking">Public speaking</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <div class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+      <div id="content" class="content">
+        
+  <div class="post">
+    <h1>Стратегии декомпозиции монолита</h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          Published <time datetime="2023-10-28T00:00:00&#43;0000">2023-10-28</time>
+        </span>
+      
+        <span class="post-author">
+          by <a href="http://localhost:1313/">Denis Fetinin</a>
+        </span>
+        
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      
+        
+          <p>Все материалы: <a href="1698499817097%20Split%20monolith.md">1698499817097 Split monolith</a></p>
+<p>Варианты по распила:</p>
+<ul>
+<li>Сначала данные</li>
+<li>Сначала код</li>
+</ul>
+<p>Варианты по коду:</p>
+<ul>
+<li>Stranglers fig
+<ul>
+<li><a href="https://medium.com/accesto/strangler-pattern-approach-to-migrating-applications-pros-and-cons-94b251f8e1a3">Strangler pattern approach to migrating applications — pros and cons</a>;</li>
+<li><a href="https://accesto.com/blog/strangler-pattern-in-practice/">Strangler Pattern in practice</a>.</li>
+</ul>
+</li>
+<li>Tactical Forking
+<ul>
+<li>[en] <a href="https://faustodelatog.wordpress.com/2020/10/16/tactical-forking/">первое упоминание подхода было за авторством Fausto De La Torre</a>;</li>
+<li>[en] ещё больше информации о tactical forking подходе можно найти в четвёртой главе <a href="https://www.oreilly.com/library/view/software-architecture-the/9781492086888/">Software Architecture The Hard Parts</a> (Chapter 4. Architectural Decomposition, Tactical Forking).</li>
+</ul>
+</li>
+<li>volatility-based-подход
+<ul>
+<li><a href="https://sebjwallace.medium.com/volatility-based-decomposition-example-1c287c1e578"> Volatility Based Decomposition Example</a>;</li>
+<li><a href="http://www.waynecliffordbarker.co.za/2019/03/23/volatility-based-decomposition-for-microservices/">Volatility based decomposition for Microservices</a>.</li>
+</ul>
+</li>
+</ul>
+
+
+        
+      
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+          
+            <span class="button next">
+              <a href="http://localhost:1313/posts/dont-embed-pointers/">
+                <span class="button__text">Don&#39;t embed pointers</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    <script defer src="https://blog-comments.fly.dev/js/commento.js"></script>
+<div id="commento"></div>
+    </div>
+
+      </div>
+
+      
+        
+<footer class="footer">
+  <div class="footer__inner">
+      
+        <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">~fetinin</span>
+  
+</a>
+
+      <div id="social-links">
+  <a href="https://www.linkedin.com/in/denis-fetinin" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://github.com/fetinin" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://www.t.me/fetinin" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-telegram"></i>
+  </a>
+  <a href="mailto:denka0087@gmail.com" target="_blank" rel="noopener noreferrer">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+  <a href="https://www.instagram.com/d.fetinin" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+
+      <div class="copyright">
+        <span>© 2026 </span>
+      </div>
+  </div>
+</footer>
+
+
+      
+    </div>
+
+    
+    <script src="http://localhost:1313/js/bundle.min.64d5b29b9db0b6948e81ffc647289009d7f100529bd3cda0bcc105dea1bf5f2b.js"></script>
+
+    
+    
+
+    <script src="/littlefoot.js"></script>
+<script>
+  const littlefootButtonTemplate = `
+<button
+  class="littlefoot__button"
+  id="<% reference %>"
+  title="Footnote <% number %>"
+>
+<svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M8,14H6V12H8V14M8,11H6V9H8V11M8,8H6V6H8V8M15,14H10V12H15V14M18,11H10V9H18V11M18,8H10V6H18V8Z" />
+</svg>
+</button>
+`;
+  littlefoot.littlefoot({
+      allowDuplicates: true,
+      buttonTemplate: littlefootButtonTemplate,
+      activateDelay: 0,
+  })
+</script>
+
+
+  </body>
+</html>
