@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
     
     <title>Стратегии декомпозиции монолита - Denis&#39; Digital Garden</title>
     
@@ -34,17 +34,17 @@ Volatility based decomposition for Microservices.
 
 "/>
 
-<link rel="canonical" href="http://localhost:1313/posts/%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B8-%D0%B4%D0%B5%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B8-%D0%BC%D0%BE%D0%BD%D0%BE%D0%BB%D0%B8%D1%82%D0%B0/" />
+<link rel="canonical" href="http://localhost:1313/blog/posts/%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B8-%D0%B4%D0%B5%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B8-%D0%BC%D0%BE%D0%BD%D0%BE%D0%BB%D0%B8%D1%82%D0%B0/" />
 
 
 
-<link href="http://localhost:1313/css/style.min.873d97aa3b55ca54b1c126d50123328881d93ce94db203de1af835bd55a16c9d.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost:1313/blog/css/style.min.873d97aa3b55ca54b1c126d50123328881d93ce94db203de1af835bd55a16c9d.css" rel="stylesheet" type="text/css" />
 
 
-<link href="http://localhost:1313/css/littlefoot.min.d93fb133b90906cbdfa42e1225cc3bc7641b9ad529c8aa4a844cd63e76c0eef1.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost:1313/blog/css/littlefoot.min.d93fb133b90906cbdfa42e1225cc3bc7641b9ad529c8aa4a844cd63e76c0eef1.css" rel="stylesheet" type="text/css" />
 
 
-<link rel="shortcut icon" href="http://localhost:1313/img/favicon.png">
+<link rel="shortcut icon" href="http://localhost:1313/blog/img/favicon.png">
 
 
 
@@ -57,7 +57,7 @@ Stranglers fig Strangler pattern approach to migrating applications — pros and
 
 
 
-<meta property="og:url" content="http://localhost:1313/posts/%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B8-%D0%B4%D0%B5%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B8-%D0%BC%D0%BE%D0%BD%D0%BE%D0%BB%D0%B8%D1%82%D0%B0/">
+<meta property="og:url" content="http://localhost:1313/blog/posts/%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B8-%D0%B4%D0%B5%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B8-%D0%BC%D0%BE%D0%BD%D0%BE%D0%BB%D0%B8%D1%82%D0%B0/">
   <meta property="og:site_name" content="Denis&#39; Digital Garden">
   <meta property="og:title" content="Стратегии декомпозиции монолита">
   <meta property="og:description" content="Все материалы: 1698499817097 Split monolith
@@ -74,7 +74,7 @@ Stranglers fig Strangler pattern approach to migrating applications — pros and
 
 
 
-<link href="http://localhost:1313/css/fontawsome.min.be63a1dbf1a76c4127521f8b050d00fb2f3ed639bfa9ea84cea2f12f90d3264c.css" rel="stylesheet" type="text/css" rel="stylesheet" defer />
+<link href="http://localhost:1313/blog/css/fontawsome.min.be63a1dbf1a76c4127521f8b050d00fb2f3ed639bfa9ea84cea2f12f90d3264c.css" rel="stylesheet" type="text/css" rel="stylesheet" defer />
 
 
   </head>
@@ -96,15 +96,15 @@ Stranglers fig Strangler pattern approach to migrating applications — pros and
     
       
         
-          <li><a href="/about">About Me</a></li>
+          <li><a href="/blog/about">About Me</a></li>
         
       
         
-          <li><a href="/posts">Posts</a></li>
+          <li><a href="/blog/posts">Posts</a></li>
         
       
         
-          <li><a href="/speaking">Public speaking</a></li>
+          <li><a href="/blog/speaking">Public speaking</a></li>
         
       
       
@@ -114,15 +114,15 @@ Stranglers fig Strangler pattern approach to migrating applications — pros and
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/about">About Me</a></li>
+        <li><a href="/blog/about">About Me</a></li>
       
     
       
-        <li><a href="/posts">Posts</a></li>
+        <li><a href="/blog/posts">Posts</a></li>
       
     
       
-        <li><a href="/speaking">Public speaking</a></li>
+        <li><a href="/blog/speaking">Public speaking</a></li>
       
     
   </ul>
@@ -160,7 +160,7 @@ Stranglers fig Strangler pattern approach to migrating applications — pros and
         </span>
       
         <span class="post-author">
-          by <a href="http://localhost:1313/">Denis Fetinin</a>
+          by <a href="http://localhost:1313/blog/">Denis Fetinin</a>
         </span>
         
     </div>
@@ -214,7 +214,7 @@ Stranglers fig Strangler pattern approach to migrating applications — pros and
           
           
             <span class="button next">
-              <a href="http://localhost:1313/posts/dont-embed-pointers/">
+              <a href="http://localhost:1313/blog/posts/dont-embed-pointers/">
                 <span class="button__text">Don&#39;t embed pointers</span>
                 <span class="button__icon">→</span>
               </a>
@@ -270,7 +270,7 @@ Stranglers fig Strangler pattern approach to migrating applications — pros and
     </div>
 
     
-    <script src="http://localhost:1313/js/bundle.min.64d5b29b9db0b6948e81ffc647289009d7f100529bd3cda0bcc105dea1bf5f2b.js"></script>
+    <script src="http://localhost:1313/blog/js/bundle.min.64d5b29b9db0b6948e81ffc647289009d7f100529bd3cda0bcc105dea1bf5f2b.js"></script>
 
     
     

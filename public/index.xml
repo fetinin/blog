@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <link>https://blog.fetinin.dev/</link>
+    <link>https://fetinin.github.io/blog/</link>
     <description>Recent content on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://blog.fetinin.dev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://fetinin.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Don&#39;t embed pointers</title>
-      <link>https://blog.fetinin.dev/posts/dont-embed-pointers/</link>
+      <link>https://fetinin.github.io/blog/posts/dont-embed-pointers/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.fetinin.dev/posts/dont-embed-pointers/</guid>
+      <guid>https://fetinin.github.io/blog/posts/dont-embed-pointers/</guid>
       <description>&lt;p&gt;In Go, it&amp;rsquo;s important to be aware of potential bugs when embedding pointers within structs. This article explores such a scenario and provides alternative solutions to avoid confusion and errors.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Go has new generic slices and map packages</title>
-      <link>https://blog.fetinin.dev/posts/go-has-new-generic-slices-and-map-packages/</link>
+      <link>https://fetinin.github.io/blog/posts/go-has-new-generic-slices-and-map-packages/</link>
       <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.fetinin.dev/posts/go-has-new-generic-slices-and-map-packages/</guid>
+      <guid>https://fetinin.github.io/blog/posts/go-has-new-generic-slices-and-map-packages/</guid>
       <description>&lt;p&gt;Since the introduction of generics in Go 1.18, there have been discussions about adding new helper functions to the standard library to cover most frequent operations. After more than a year, two new libraries with generics will be added&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; into the Go standard library starting from Go 1.21.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Kubectl cheatsheet</title>
-      <link>https://blog.fetinin.dev/posts/kubectl-cheatsheet/</link>
+      <link>https://fetinin.github.io/blog/posts/kubectl-cheatsheet/</link>
       <pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://blog.fetinin.dev/posts/kubectl-cheatsheet/</guid>
+      <guid>https://fetinin.github.io/blog/posts/kubectl-cheatsheet/</guid>
       <description>&lt;p&gt;Throughout the years of using kubernetes as a developer I&amp;rsquo;ve collected a bunch of useful commands that helped me to debug issues and have better understanding of what is happening in the cluster.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Safe git force push</title>
-      <link>https://blog.fetinin.dev/posts/safe-git-force-push/</link>
+      <link>https://fetinin.github.io/blog/posts/safe-git-force-push/</link>
       <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://blog.fetinin.dev/posts/safe-git-force-push/</guid>
+      <guid>https://fetinin.github.io/blog/posts/safe-git-force-push/</guid>
       <description>&lt;p&gt;You&amp;rsquo;ve likely been in this situation before. You make some minor code fixes, do &lt;code&gt;git commit --amend&lt;/code&gt; to add them to the current commit, and do &lt;code&gt;git push --force&lt;/code&gt;. Then, you happily open pull request and see that you&amp;rsquo;ve deleted you&amp;rsquo;re colleagues commit.😩&lt;/p&gt;</description>
     </item>
     <item>
       <title>Introduction to Gonkey -- Testing automation tool</title>
-      <link>https://blog.fetinin.dev/posts/gonkey/introduction/</link>
+      <link>https://fetinin.github.io/blog/posts/gonkey/introduction/</link>
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://blog.fetinin.dev/posts/gonkey/introduction/</guid>
+      <guid>https://fetinin.github.io/blog/posts/gonkey/introduction/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/lamoda/gonkey&#34;&gt;Gonkey&lt;/a&gt; is a testing automation tool that can test your service API without a single line of code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
-      <link>https://blog.fetinin.dev/about/</link>
+      <link>https://fetinin.github.io/blog/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://blog.fetinin.dev/about/</guid>
-      <description>&lt;h1 id=&#34;hi-im-denis-&#34;&gt;Hi, I&amp;rsquo;m Denis 💁🏻‍♂️💻&lt;/h1&gt;&#xA;&lt;p&gt;Golang and Python developer who secretly loves frontend, but most of the time works as a backend developer at &lt;a href=&#34;https://bki-okb.ru/&#34;&gt;UCB&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I have experience with microservices and event-driven architecture. I&amp;rsquo;ve worked in e-commerce on app and website backends, as well as over 20 microservices that provide discounts and coupons, catalog navigation, checkout, cart, and other features for our customers.&lt;/p&gt;&#xA;&lt;p&gt;I enjoy working in small to medium teams and helping to understand business requirements. I can assist in planning and documenting architecture, decomposing tasks, writing code, and getting things done. I&amp;rsquo;m always happy to help my colleagues.&lt;/p&gt;</description>
+      <guid>https://fetinin.github.io/blog/about/</guid>
+      <description>&lt;h1 id=&#34;hi-im-denis-&#34;&gt;Hi, I&amp;rsquo;m Denis 💁🏻‍♂️💻&lt;/h1&gt;&#xA;&lt;p&gt;Golang and Python developer who secretly loves frontend, but most of the time works as a backend developer at &lt;a href=&#34;https://www.investing.com/&#34;&gt;Investing.com&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I have experience with microservices and event-driven architecture. I&amp;rsquo;ve worked in e-commerce on app and website backends, as well as over 20 microservices that provide discounts and coupons, catalog navigation, checkout, cart, and other features for our customers.&lt;/p&gt;&#xA;&lt;p&gt;I enjoy working in small to medium teams and helping to understand business requirements. I can assist in planning and documenting architecture, decomposing tasks, writing code, and getting things done. I&amp;rsquo;m always happy to help my colleagues.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
-      <link>https://blog.fetinin.dev/speaking/</link>
+      <link>https://fetinin.github.io/blog/speaking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://blog.fetinin.dev/speaking/</guid>
+      <guid>https://fetinin.github.io/blog/speaking/</guid>
       <description>&lt;p&gt;All content on this page is in Russian because all my public speaking is in Russian, so it doesn&amp;rsquo;t make sense to write an English description.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cdc-на-коленке&#34;&gt;CDC на коленке&lt;/h2&gt;&#xA;&lt;p&gt;Оффлайн выступление на митапе &lt;a href=&#34;http://web.archive.org/web/20221214170451/https://devday.ru/&#34;&gt;Dev Day&lt;/a&gt; от 2GIS.&lt;/p&gt;&#xA;&lt;p&gt;Внезапно возникшее желание разобраться в том как можно работать из Go переросло в доклад, где вымышленному Серёге в канун нового года нужно придумать как переехать с Posgtres на новую хайповую базу без даунтайма. Справится ли Серёга?&#xA;&lt;details&gt;&#xA;  &lt;summary&gt;Открыть доклад&lt;/summary&gt;&#xA;  &#xA;  &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;        &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/MiM6x4Ly-TY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;      &lt;/div&gt;&#xA;&#xA;&#xA;&lt;/details&gt;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Debug info</title>
-      <link>https://blog.fetinin.dev/debug/</link>
+      <link>https://fetinin.github.io/blog/debug/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://blog.fetinin.dev/debug/</guid>
-      <description>&lt;p&gt;Last update time: 2023-10-28 16:47:21 +0300 MSK&lt;/p&gt;</description>
+      <guid>https://fetinin.github.io/blog/debug/</guid>
+      <description>&lt;p&gt;Last update time: 2026-03-31 21:44:32 +0300 MSK&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

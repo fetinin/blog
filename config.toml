@@ -1,4 +1,4 @@
-baseurl = "https://blog.fetinin.dev/"
+baseurl = "https://fetinin.github.io/blog/"
 languageCode = "en-us"
 theme = "hugo-theme-modern"
 paginate = 5
@@ -55,7 +55,7 @@ enableRobotsTXT = true
 
 [languages.en.params.logo]
   logoText = "~fetinin"
-  logoHomeLink = "/"
+  logoHomeLink = "/blog/"
   # or
   #
   # path = "/img/your-example-logo.svg"
